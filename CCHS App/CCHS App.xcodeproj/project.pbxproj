@@ -14,8 +14,7 @@
 		3F1B0AAE1AF7AC1000A511D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */; };
 		3F1B0AB11AF7AC1000A511D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AAF1AF7AC1000A511D5 /* LaunchScreen.xib */; };
 		3F1B0ABD1AF7AC1000A511D5 /* CCHS_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0ABC1AF7AC1000A511D5 /* CCHS_AppTests.m */; };
-		3F1B0AC71AF7AEAE00A511D5 /* calendar icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AC61AF7AEAE00A511D5 /* calendar icon.png */; };
-		3F1B0ACD1AF7B01600A511D5 /* bell icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0ACC1AF7B01600A511D5 /* bell icon.png */; };
+		3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +41,8 @@
 		3F1B0AB61AF7AC1000A511D5 /* CCHS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CCHS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1B0ABB1AF7AC1000A511D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1B0ABC1AF7AC1000A511D5 /* CCHS_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCHS_AppTests.m; sourceTree = "<group>"; };
-		3F1B0AC61AF7AEAE00A511D5 /* calendar icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar icon.png"; sourceTree = "<group>"; };
-		3F1B0ACC1AF7B01600A511D5 /* bell icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell icon.png"; sourceTree = "<group>"; };
+		3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewController.h; sourceTree = "<group>"; };
+		3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +87,10 @@
 				3F1B0AA41AF7AC1000A511D5 /* AppDelegate.h */,
 				3F1B0AA51AF7AC1000A511D5 /* AppDelegate.m */,
 				3F1B0AA71AF7AC1000A511D5 /* ViewController.h */,
+				3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */,
+				3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */,
 				3F1B0AA81AF7AC1000A511D5 /* ViewController.m */,
 				3F1B0AAA1AF7AC1000A511D5 /* Main.storyboard */,
-				3F1B0AC61AF7AEAE00A511D5 /* calendar icon.png */,
-				3F1B0ACC1AF7B01600A511D5 /* bell icon.png */,
 				3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */,
 				3F1B0AAF1AF7AC1000A511D5 /* LaunchScreen.xib */,
 				3F1B0AA01AF7AC1000A511D5 /* Supporting Files */,
@@ -206,10 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1B0AAC1AF7AC1000A511D5 /* Main.storyboard in Resources */,
-				3F1B0ACD1AF7B01600A511D5 /* bell icon.png in Resources */,
 				3F1B0AB11AF7AC1000A511D5 /* LaunchScreen.xib in Resources */,
 				3F1B0AAE1AF7AC1000A511D5 /* Images.xcassets in Resources */,
-				3F1B0AC71AF7AEAE00A511D5 /* calendar icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +227,7 @@
 				3F1B0AA91AF7AC1000A511D5 /* ViewController.m in Sources */,
 				3F1B0AA61AF7AC1000A511D5 /* AppDelegate.m in Sources */,
 				3F1B0AA31AF7AC1000A511D5 /* main.m in Sources */,
+				3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +424,7 @@
 				3F1B0AC21AF7AC1000A511D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F1B0AC31AF7AC1000A511D5 /* Build configuration list for PBXNativeTarget "CCHS AppTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +433,7 @@
 				3F1B0AC51AF7AC1000A511D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
