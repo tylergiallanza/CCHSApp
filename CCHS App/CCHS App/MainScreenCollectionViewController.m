@@ -10,7 +10,8 @@
 
 @interface MainScreenCollectionViewController ()
 
-@property NSArray *arr;
+@property NSArray *images;
+@property NSMutableArray *buttons;
 
 @end
 
@@ -20,7 +21,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _arr=[[NSArray alloc] initWithObjects:@"bell", @"calendar",@"contacts", @"club", @"powerschool", @"outlook", @"search",@"news",@"globe",@"phone",@"map" nil];
+    _images=[[NSArray alloc] initWithObjects:@"bell", @"calendar",@"contacts", @"club", @"powerschool", @"outlook", @"search",@"news",@"globe",@"phone",@"map", nil];
+    _buttons= [[NSMutableArray alloc] init];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -61,10 +63,13 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    //cell.backgroundColor=[UIColor redColor];
-    
-    if(indexPath.row < _arr.count) {
-        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[_arr objectAtIndex:indexPath.row]]];
+    if(indexPath.row < _images.count) {
+        UIButton *b=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 75, 75)];
+        [b setBackgroundImage:[UIImage imageNamed:[_images objectAtIndex:indexPath.row]] forState:UIControlStateNormal];
+        [b addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [cell addSubview:b];
+        [_buttons addObject:b];
+        
     }
     
     // Configure the cell
@@ -72,7 +77,20 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
+
+-(void)buttonClick:(id)selector {
+    for(int i=0;i<_buttons.count;i++) {
+        if([[_buttons objectAtIndex:i] isEqual:selector])
+            NSLog(@"button %d was clicked",i);
+    }
+}
+
+
 #pragma mark <UICollectionViewDelegate>
+
+/*-(void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%d", indexPath.row);
+}*/
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
