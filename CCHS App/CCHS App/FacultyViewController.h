@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FacultyViewController : UIViewController
+@interface FacultyViewController : UITableViewController
 
 @end
