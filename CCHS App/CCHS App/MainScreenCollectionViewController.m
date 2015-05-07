@@ -7,12 +7,13 @@
 //
 
 #import "MainScreenCollectionViewController.h"
+#import "CalendarViewController.h"
 
 @interface MainScreenCollectionViewController ()
 
 @property NSArray *images;
 @property NSMutableArray *buttons;
-
+//@property CalendarViewController *calendar;
 @end
 
 @implementation MainScreenCollectionViewController
@@ -23,6 +24,8 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     _images=[[NSArray alloc] initWithObjects:@"bell", @"calendar",@"contacts", @"club", @"powerschool", @"outlook", @"search",@"news",@"globe",@"phone",@"map", nil];
     _buttons= [[NSMutableArray alloc] init];
+    //    _calendar=[[CalendarViewController alloc] init];
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -38,14 +41,14 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -80,8 +83,19 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)buttonClick:(id)selector {
     for(int i=0;i<_buttons.count;i++) {
-        if([[_buttons objectAtIndex:i] isEqual:selector])
-            NSLog(@"button %d was clicked",i);
+        if([[_buttons objectAtIndex:i] isEqual:selector]){
+            @try {
+                [self performSegueWithIdentifier:[_images objectAtIndex:i] sender:self];
+            }
+            @catch (NSException *exception) {
+                //I don't need anything here. This block is so the program will execute segues it has and not do anything if it doesn't have the segue. This was the easiest way to code it. 
+            }
+            @finally {
+            }
+            
+            //                [self.navigationController pushViewController:_calendar animated:YES];
+            
+        }
     }
 }
 
@@ -89,36 +103,36 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDelegate>
 
 /*-(void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%d", indexPath.row);
-}*/
+ NSLog(@"%d", indexPath.row);
+ }*/
 
 /*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment this method to specify if the specified item should be highlighted during tracking
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
 	return YES;
-}
-*/
+ }
+ */
 
 /*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
+ // Uncomment this method to specify if the specified item should be selected
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+ return YES;
+ }
+ */
 
 /*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
 	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	
-}
-*/
+ }
+ */
 
 @end
