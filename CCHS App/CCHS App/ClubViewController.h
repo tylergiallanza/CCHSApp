@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClubViewController : UIViewController
+@interface ClubViewController : UITableViewController
+
+
 
 @end
