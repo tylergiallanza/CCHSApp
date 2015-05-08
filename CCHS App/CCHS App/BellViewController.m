@@ -16,17 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"bell");
+    NSLog(@"bell");[
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    UINavigationBar *bar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0,0,100, 100)];
-    //UIBarButtonItem *title = [[UIBarButtonItem alloc] initWithTitle:@"Bell Schedule" style:UIBarButtonItemStylePlain target:self action:@selector(done:)];
-//    UINavigationItem *title = [[UINavigationItem alloc] initWithTitle:@"Bell Schedule"];
-//    [bar setItems:[NSArray arrayWithObject:title] animated:YES];
-    [self.view addSubview:bar];
+   
     // Dispose of any resources that can be recreated.
 }
 
