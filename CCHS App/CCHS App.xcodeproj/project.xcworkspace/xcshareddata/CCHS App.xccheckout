@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>32C2717B-9215-424F-B827-547399A860C6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CCHS App</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A0D5DAB89DCD8278D5712DD4F251D9BBA09B7C9E</key>
 		<string>https://github.com/tylergiallanza/CCHSApp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CCHS App/CCHS App.xcodeproj/project.xcworkspace</string>
+	<string>CCHS App/CCHS App.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A0D5DAB89DCD8278D5712DD4F251D9BBA09B7C9E</key>

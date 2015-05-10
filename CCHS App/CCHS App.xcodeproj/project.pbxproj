@@ -19,6 +19,7 @@
 		3FE5C5A51AFA501B00758162 /* FacultyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A41AFA501B00758162 /* FacultyViewController.m */; };
 		3FE5C5A81AFA503600758162 /* ClubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A71AFA503600758162 /* ClubViewController.m */; };
 		3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */; };
+		9A09E4AE1AFEF59D00F5B86D /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09E4AD1AFEF59D00F5B86D /* Schedule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		3FE5C5A71AFA503600758162 /* ClubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubViewController.m; sourceTree = "<group>"; };
 		3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewController.h; sourceTree = "<group>"; };
 		3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewController.m; sourceTree = "<group>"; };
+		9A09E4AC1AFEF59D00F5B86D /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		9A09E4AD1AFEF59D00F5B86D /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */,
 				3F1B0AA81AF7AC1000A511D5 /* ViewController.m */,
 				3F1B0AAA1AF7AC1000A511D5 /* Main.storyboard */,
+				9A09E4AC1AFEF59D00F5B86D /* Schedule.h */,
+				9A09E4AD1AFEF59D00F5B86D /* Schedule.m */,
 				3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */,
 				3F1B0AAF1AF7AC1000A511D5 /* LaunchScreen.xib */,
 				3F1B0AA01AF7AC1000A511D5 /* Supporting Files */,
@@ -247,6 +252,7 @@
 				3F1B0AA91AF7AC1000A511D5 /* ViewController.m in Sources */,
 				3F1B0AA61AF7AC1000A511D5 /* AppDelegate.m in Sources */,
 				3F1B0AA31AF7AC1000A511D5 /* main.m in Sources */,
+				9A09E4AE1AFEF59D00F5B86D /* Schedule.m in Sources */,
 				3FE5C59F1AFA4FD900758162 /* CalendarViewController.m in Sources */,
 				3FE5C5A81AFA503600758162 /* ClubViewController.m in Sources */,
 				3FE5C5A51AFA501B00758162 /* FacultyViewController.m in Sources */,

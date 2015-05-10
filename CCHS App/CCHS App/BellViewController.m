@@ -9,6 +9,9 @@
 #import "BellViewController.h"
 
 @interface BellViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *CurPeriod;
+@property (weak, nonatomic) IBOutlet UILabel *CurTime;
+@property (weak, nonatomic) IBOutlet UILabel *CurSchedule;
 
 @end
 
@@ -16,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"bell");[
+    NSLog(@"bell");
     // Do any additional setup after loading the view.
 }
 
