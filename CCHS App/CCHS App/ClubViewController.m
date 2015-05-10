@@ -60,26 +60,40 @@
     // Return the number of rows in the section.
     return _clubs.count;
 }
+- (IBAction)culbSpecifics:(id)sender {
+    
+    CGPoint pointInView = [sender locationInView : self.tableView ];
+    NSIndexPath *path = [self.tableView indexPathForRowAtPoint : pointInView];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[_clubs objectAtIndex: path.row ] message:@"\n\n Club Information \n\n" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    
+//    UITextView *someTextView = [[UITextView alloc] initWithFrame:CGRectMake(15, 35, 250, 100)];
+//    someTextView.backgroundColor = [UIColor whiteColor];
+//    someTextView.textColor = [UIColor blackColor];
+//    someTextView.editable = NO;
+//    someTextView.font = [UIFont systemFontOfSize:15];
+//    someTextView.text = @"Enter Text Here";
+//    [alert addSubview:someTextView];
+    [alert show];
+    //[someTextView release];
+    //[alert release];
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%ld", (long)indexPath.row);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     // Configure the cell...
-    
-    //cell.textLabel.text = [_clubs objectAtIndex:indexPath.row-1];
-    
-    
-    
-   return cell;
+    cell.textLabel.text = [_clubs objectAtIndexedSubscript:indexPath.row];
+    return cell;
 }
-
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     
     return NO;
 }
+
+
+
 
 /*
 #pragma mark - Navigation
