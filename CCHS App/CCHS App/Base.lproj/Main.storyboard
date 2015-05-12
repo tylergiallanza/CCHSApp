@@ -720,6 +720,21 @@
                             <constraint firstAttribute="trailing" secondItem="slZ-II-mCs" secondAttribute="trailing" id="mBy-CE-sLq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CurPeriod" destination="ESd-4q-4MU" id="RiF-Hv-r7a"/>
+                        <outlet property="CurSchedule" destination="65K-wq-XyE" id="yuu-sj-Loc"/>
+                        <outlet property="CurTime" destination="ADP-uY-JZy" id="ROo-Rb-HIT"/>
+                        <outlet property="Per1" destination="4UL-pu-cBg" id="5bZ-sL-5Ph"/>
+                        <outletCollection property="Times" destination="4UL-pu-cBg" collectionClass="NSMutableArray" id="vXG-DW-oxi"/>
+                        <outletCollection property="Times" destination="DjX-bs-5LR" collectionClass="NSMutableArray" id="VVA-RU-nCT"/>
+                        <outletCollection property="Times" destination="5Ih-Vs-Guw" collectionClass="NSMutableArray" id="MXb-2x-3r9"/>
+                        <outletCollection property="Times" destination="Yol-eX-447" collectionClass="NSMutableArray" id="Cm0-PH-GgY"/>
+                        <outletCollection property="Times" destination="K9f-Oe-89M" collectionClass="NSMutableArray" id="ebi-gH-bHL"/>
+                        <outletCollection property="Times" destination="RAo-bt-GVk" collectionClass="NSMutableArray" id="Z2j-sW-4jA"/>
+                        <outletCollection property="Times" destination="CbE-Cg-8nr" collectionClass="NSMutableArray" id="Sul-Ta-7ya"/>
+                        <outletCollection property="Times" destination="7x7-2N-Irn" collectionClass="NSMutableArray" id="8pd-4F-FfK"/>
+                        <outletCollection property="Times" destination="Ek2-ec-FjI" collectionClass="NSMutableArray" id="frf-c6-c8Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4F-1h-8vL" sceneMemberID="firstResponder"/>
             </objects>
