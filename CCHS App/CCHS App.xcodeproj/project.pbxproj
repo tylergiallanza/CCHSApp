@@ -19,6 +19,7 @@
 		3FE5C5A51AFA501B00758162 /* FacultyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A41AFA501B00758162 /* FacultyViewController.m */; };
 		3FE5C5A81AFA503600758162 /* ClubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A71AFA503600758162 /* ClubViewController.m */; };
 		3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */; };
+		3FFD6CAC1B0238440091A6C7 /* club.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD6CAB1B0238440091A6C7 /* club.m */; };
 		9A09E4AE1AFEF59D00F5B86D /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09E4AD1AFEF59D00F5B86D /* Schedule.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		3FE5C5A71AFA503600758162 /* ClubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubViewController.m; sourceTree = "<group>"; };
 		3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewController.h; sourceTree = "<group>"; };
 		3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewController.m; sourceTree = "<group>"; };
+		3FFD6CAA1B0238440091A6C7 /* club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = club.h; sourceTree = "<group>"; };
+		3FFD6CAB1B0238440091A6C7 /* club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = club.m; sourceTree = "<group>"; };
 		9A09E4AC1AFEF59D00F5B86D /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
 		9A09E4AD1AFEF59D00F5B86D /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +122,8 @@
 				3FE5C5A41AFA501B00758162 /* FacultyViewController.m */,
 				3FE5C5A61AFA503600758162 /* ClubViewController.h */,
 				3FE5C5A71AFA503600758162 /* ClubViewController.m */,
+				3FFD6CAA1B0238440091A6C7 /* club.h */,
+				3FFD6CAB1B0238440091A6C7 /* club.m */,
 			);
 			path = "CCHS App";
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				3F1B0AA31AF7AC1000A511D5 /* main.m in Sources */,
 				9A09E4AE1AFEF59D00F5B86D /* Schedule.m in Sources */,
 				3FE5C59F1AFA4FD900758162 /* CalendarViewController.m in Sources */,
+				3FFD6CAC1B0238440091A6C7 /* club.m in Sources */,
 				3FE5C5A81AFA503600758162 /* ClubViewController.m in Sources */,
 				3FE5C5A51AFA501B00758162 /* FacultyViewController.m in Sources */,
 				3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */,
