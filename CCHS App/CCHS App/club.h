@@ -10,6 +10,6 @@
 
 @interface club : NSObject
 
-- (id)initWithName: (NSString*) n;
-
+- (id)initWithDetails: (NSString*) n and: (long*) hour and: (long*) min and: (NSString*) day and: (NSString*) place and: (NSArray*) spon;
+-(NSString *) getName;
 @end
