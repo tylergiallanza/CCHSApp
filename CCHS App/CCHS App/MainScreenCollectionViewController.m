@@ -93,9 +93,13 @@ static NSString * const reuseIdentifier = @"Cell";
     for(int i=0;i<_buttons.count;i++) {
         if([[_buttons objectAtIndex:i] isEqual:selector]){
             @try {
-                [self performSegueWithIdentifier:[_images objectAtIndex:i] sender:self];
+                NSLog(@"Will segue here with %@", [_images objectAtIndex: i]);
+                [self performSegueWithIdentifier: @"bell" sender:self]; //[_images objectAtIndex:i] sender:self];
+
             }
             @catch (NSException *exception) {
+                NSLog(@"main: Caught %@: %@", [exception name], [exception  reason]);
+                 //NSLog(@"%@ had an error",[_images objectAtIndex:i]);
                 //I don't need anything here. This block is so the program will execute segues it has and not do anything if it doesn't have the segue. This was the easiest way to code it. 
             }
             @finally {

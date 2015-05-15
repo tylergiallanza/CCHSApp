@@ -18,32 +18,58 @@
 @property NSMutableArray *AssemblyTimes;
 @property NSMutableArray *CollabTimes;
 @property NSDate *date;
+@property NSMutableArray *CollabDates;
+@property NSMutableArray *Schedule;
 
 @end
 
 @implementation BellViewController
 
+-(void) viewWillAppear:(BOOL)animated{
+    NSLog(@"viewWillAppear - bell");
+}
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    NSLog(@"bell");
+    NSLog(@"bell controller");
     self.RegularTimes = [[NSMutableArray alloc] init];
     self.StormTimes = [[NSMutableArray alloc] init];
     self.AssemblyTimes = [[NSMutableArray alloc] init];
     self.CollabTimes = [[NSMutableArray alloc] init];
+    self.Schedule = [[NSMutableArray alloc] init];
+    self.Schedule = self.RegularTimes;
     self.date = [[NSDate alloc] init];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSLog(@"%@", [dateFormatter stringFromDate:self.date]);
     [self loadTimes];
-    for(int i = 0; i<self.StormTimes.count; i++){
-        UILabel *label = [self.Times objectAtIndex:i];
-        label.text = [self.StormTimes objectAtIndex:i];
-        NSLog(@"%@", label.text);
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    NSString *curTime = [dateFormatter stringFromDate:self.date];
+    NSLog(curTime);
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    dateFormatter.timeStyle = NSDateFormatterNoStyle;
+    NSString *curDay = [dateFormatter stringFromDate:self.date];
+    NSLog(curDay);
+    for(int i = 0; i<self.CollabDates.count; i++){
+        NSString *day = [self.CollabDates objectAtIndex:i];
+        if([curDay isEqualToString:day]){
+            self.CurSchedule.text = @"Collaboration Day Schedule";
+            [self processTimes:self.CollabTimes];
+            self.Schedule = self.CollabTimes;
+        }
     }
-    self.CurSchedule.text = @"Storm Day Schedule";
-   // UILabel *replace = [self.StormTimes objectAtIndex:0];
-    // Do any additional setup after loading the view.
+    for(int i = 0; i<self.Schedule.count; i++){
+        UILabel *label = [self.Times objectAtIndex:i];
+        label.text = [self.Schedule objectAtIndex:i];
+    }
+   
+
 }
 
+- (void) processTimes: (NSMutableArray*) schedule{
+    for(int i = 0; i<schedule.count; i++){
+        
+    }
+    
+}
 - (void) loadTimes{
     
     NSString *label =[[NSString alloc] init];
@@ -67,7 +93,6 @@
     label = @"2:00 - 2:51";
     [self.RegularTimes addObject: label];
     
-  
     label = @"7:00 - 7:39";
     [self.StormTimes addObject: label];
     label = @"7:50 - 8:28";
@@ -80,7 +105,6 @@
     [self.StormTimes addObject: label];
     label = @"11:19 - 12:07";
     [self.StormTimes addObject: label];
-
     label = @"12:14 - 1:02";
     [self.StormTimes addObject: label];
     label = @"1:09 - 1:57";
@@ -131,6 +155,8 @@
     
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
