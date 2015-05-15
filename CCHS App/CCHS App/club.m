@@ -25,7 +25,7 @@
 
 @implementation club
 
-- (id)initWithDetails: (NSString*) n and: (long*) hour and: (long*) min and: (NSString*) day and: (NSString*) place and: (NSArray*) spon{
+- (id)initWithDetails: (NSString*) n and: (NSString*) t and: (NSString*) day and: (NSString*) place and: (NSArray*) spon{
     self = [super init];
     if(self){
      
