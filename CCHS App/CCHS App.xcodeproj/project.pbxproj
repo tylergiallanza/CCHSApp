@@ -21,6 +21,7 @@
 		3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */; };
 		3FFD6CAC1B0238440091A6C7 /* club.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD6CAB1B0238440091A6C7 /* club.m */; };
 		9A09E4AE1AFEF59D00F5B86D /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09E4AD1AFEF59D00F5B86D /* Schedule.m */; };
+		9AF364F31B07F1C80083806A /* BellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF364F21B07F1C80083806A /* BellBackground.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		3FFD6CAB1B0238440091A6C7 /* club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = club.m; sourceTree = "<group>"; };
 		9A09E4AC1AFEF59D00F5B86D /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
 		9A09E4AD1AFEF59D00F5B86D /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		9AF364F11B07F1C80083806A /* BellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BellBackground.h; sourceTree = "<group>"; };
+		9AF364F21B07F1C80083806A /* BellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BellBackground.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */,
 				3FE5C5A01AFA4FF100758162 /* BellViewController.h */,
 				3FE5C5A11AFA4FF100758162 /* BellViewController.m */,
+				9AF364F11B07F1C80083806A /* BellBackground.h */,
+				9AF364F21B07F1C80083806A /* BellBackground.m */,
 				3F1B0AA51AF7AC1000A511D5 /* AppDelegate.m */,
 				3F1B0AA71AF7AC1000A511D5 /* ViewController.h */,
 				3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */,
@@ -264,6 +269,7 @@
 				3FE5C5A51AFA501B00758162 /* FacultyViewController.m in Sources */,
 				3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */,
 				3FE5C5A21AFA4FF100758162 /* BellViewController.m in Sources */,
+				9AF364F31B07F1C80083806A /* BellBackground.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

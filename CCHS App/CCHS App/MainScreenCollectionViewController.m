@@ -94,7 +94,7 @@ static NSString * const reuseIdentifier = @"Cell";
         if([[_buttons objectAtIndex:i] isEqual:selector]){
             @try {
                 NSLog(@"Will segue here with %@", [_images objectAtIndex: i]);
-                [self performSegueWithIdentifier: @"bell" sender:self]; //[_images objectAtIndex:i] sender:self];
+                [self performSegueWithIdentifier: [_images objectAtIndex: i] sender:self]; //[_images objectAtIndex:i] sender:self];
 
             }
             @catch (NSException *exception) {

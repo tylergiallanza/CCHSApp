@@ -70,6 +70,7 @@
     }
     
 }
+
 - (void) loadTimes{
     
     NSString *label =[[NSString alloc] init];
