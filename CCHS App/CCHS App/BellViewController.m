@@ -19,6 +19,7 @@
 @property NSMutableArray *CollabTimes;
 @property NSDate *date;
 @property NSMutableArray *CollabDates;
+@property NSMutableArray *AssemblyDates;
 @property NSMutableArray *Schedule;
 
 @end
@@ -39,11 +40,15 @@
     self.Schedule = [[NSMutableArray alloc] init];
     self.Schedule = self.RegularTimes;
     self.date = [[NSDate alloc] init];
+    self.CollabDates = [[NSMutableArray alloc] init];
+    self.AssemblyDates = [[NSMutableArray alloc] init];
+    [self addDates];
     [self loadTimes];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
     NSString *curTime = [dateFormatter stringFromDate:self.date];
     NSLog(curTime);
+    NSLog([self convertToMilitary:curTime]);
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
     dateFormatter.timeStyle = NSDateFormatterNoStyle;
     NSString *curDay = [dateFormatter stringFromDate:self.date];
@@ -52,7 +57,15 @@
         NSString *day = [self.CollabDates objectAtIndex:i];
         if([curDay isEqualToString:day]){
             self.CurSchedule.text = @"Collaboration Day Schedule";
-            [self processTimes:self.CollabTimes];
+           
+            self.Schedule = self.CollabTimes;
+        }
+    }
+    for(int i = 0; i<self.AssemblyDates.count; i++){
+        NSString *day = [self.AssemblyDates objectAtIndex:i];
+        if([curDay isEqualToString:day]){
+            self.CurSchedule.text = @"Assembly Schedule";
+           
             self.Schedule = self.CollabTimes;
         }
     }
@@ -60,11 +73,58 @@
         UILabel *label = [self.Times objectAtIndex:i];
         label.text = [self.Schedule objectAtIndex:i];
     }
-   
+    [self processTimes:curTime and:self.Schedule];
 
 }
 
-- (void) processTimes: (NSMutableArray*) schedule{
+- (void) addDates{
+    [self.CollabDates addObject: @"10/10/14"];
+    [self.CollabDates addObject: @"12/3/14"];
+    [self.CollabDates addObject: @"1/28/15"];
+    [self.CollabDates addObject: @"3/18/15"];
+    [self.CollabDates addObject: @"4/15/15"];
+    
+}
+
+- (NSString *) convertToMilitary: (NSString *) time {
+    int index;
+    for(int i = 0; i<time.length; i++){
+        if([time characterAtIndex:i]==':'){
+            index = i;
+        }
+    }
+    NSString *hour = [time substringToIndex:index];
+    NSLog(hour);
+    int value = [hour intValue];
+    if(value == 12){
+        value = 0;
+    }else{
+        value += 12;
+    }
+    hour = [NSString stringWithFormat:@"%d", value];
+    return hour;
+}
+
+- (void) processTimes: (NSString *) time and: (NSMutableArray*) schedule{
+    NSString *symbol = [time substringFromIndex:time.length-2];
+    if([symbol isEqualToString:@"PM"]){
+         if(![[time substringToIndex:2] isEqualToString:@"12"]){
+             [self convertToMilitary:time];
+         }
+    }else{
+        if([[time substringToIndex:2] isEqualToString:@"12"]){
+            [self convertToMilitary: time];
+        }
+    }
+    time = @"7:00 PM";
+    NSComparisonResult result = [time compare: @"8:00 AM"];
+    if(result == NSOrderedAscending){
+        NSLog(@"time is less");
+    }else if(result == NSOrderedDescending){
+        NSLog(@"time is more");
+    }else{
+        NSLog(@"equal");
+    }
     for(int i = 0; i<schedule.count; i++){
         
     }

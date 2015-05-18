@@ -64,6 +64,7 @@
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Kimberly Shuman Smith"];
     [s addObject:@"Mary Morgan"];
+<<<<<<< HEAD
     [_clubs addObject: [[club alloc] initWithDetails:@"Botanica @ Creek " and:@"3:15 to 4:15 pm" and: @"" and:@"Greenhouse (W545)" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Mike Barrett"];
@@ -204,6 +205,148 @@
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Dotty Dady"];
      [_clubs addObject: [[club alloc] initWithDetails:@"Math Club" and:@"3:00 to 4:00 pm" and:@"Tuesday" and:@"W306" and:s]];
+=======
+//    [_clubs addObject: [[club alloc] initWithName:@"Botanica @ Creek "]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Mike Barrett"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Capture the Flag"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"TBD];
+//    [_clubs addObject: [[club alloc] initWithName:@"Chess Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Jack Song"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Chinese Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Jack Song"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Chinese Honor Society"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Katie Hester"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Colorado Teen Effect"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"T.Morris"];
+//    [s addObject:@"M.Goeglein"];
+//    [s addObject:@"T.Kirkpatrick"];
+//    [_clubs addObject: [[club alloc] initWithName:@"COLT"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Tom Michel "];
+//    [_clubs addObject: [[club alloc] initWithName:@"Comic Book Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Keith Harrison "];
+//    [_clubs addObject: [[club alloc] initWithName:@"Cubing Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Jocelyn Nguyen "];
+//    [_clubs addObject: [[club alloc] initWithName:@"Cybersecurity Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"J.Konrad"];
+//     [s addObject:@"B.Adolphi"];
+//     [s addObject:@"D.Sheeks"];
+//    [_clubs addObject: [[club alloc] initWithName:@"DECA"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Mary Ann Goff"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Destination Imagination"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Leigh Vinzant"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Dia(BEAT)es Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Marjorie Hamburger"];
+//     [s addObject:@"Tess Simpson"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Diversity Task Force"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Mary Chapman"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Doctor Who Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"David Knoeckel"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Drummers on Buckets"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Dave Benson"];
+//    [s addObject:@"Ben Singh"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Excalibur"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Michael Goodman"];
+//     [s addObject:@"Susan Shaw"];
+//    [_clubs addObject: [[club alloc] initWithName:@"FBLA"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Sasha Gartin "];
+//    [_clubs addObject: [[club alloc] initWithName:@"FCCLA "]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Mark Goldsberry"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Fellowship of Christian Athletes"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Dave Stallings"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Figure Drawing"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"David Gamelin"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Film Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Susie Russell"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Fine Print"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Paul Cronin"];
+//    [_clubs addObject: [[club alloc] initWithName:@"French Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Susan Bowditch "];
+//    [_clubs addObject: [[club alloc] initWithName:@"French Honor Society"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Matt Buddington"];
+//     [s addObject:@"Dan Draper"];
+//     [s addObject:@"Chris Meagher"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Frisbee Golf Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Virginia DeCesare"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Future Soldiers of America"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Susanne Smith"];
+//    [_clubs addObject: [[club alloc] initWithName:@"German Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Susanne Smith"];
+//    [_clubs addObject: [[club alloc] initWithName:@"German Honor Society"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"TBD"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Harry Potter Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Noah Zepelin "];
+//    [_clubs addObject: [[club alloc] initWithName:@"History Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Jay Stribling "];
+//    [_clubs addObject: [[club alloc] initWithName:@"Huddle Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Lucas Nkwelle"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Interact Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Joelle Hogue"];
+//    [_clubs addObject: [[club alloc] initWithName:@"International Exchange Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Jim Young"];
+//     [s addObject:@"Jessica Olsen "];
+//    [_clubs addObject: [[club alloc] initWithName:@"Jewish Student Connection"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Karl Mimmack"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Juggling/Unicycling Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"DeeDee Hicks"];
+//     [s addObject:@"Stephen Smith"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Key Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Yoon Park"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Korean Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Greg Critchett];
+//    [_clubs addObject: [[club alloc] initWithName:@"L.E.G.O.S. "]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Amy Sommer"];
+//    [s addObject:@"Scott Holcomb"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Latin Club"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"TBD"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Linking Hearts"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Tim Libby"];
+//     [s addObject:@"Sara Wynes "];
+//    [_clubs addObject: [[club alloc] initWithName:@"Marching Band/Color Guard"]];
+//    s = [[NSMutableArray alloc] init];
+//    [s addObject:@"Dotty Dady"];
+//    [_clubs addObject: [[club alloc] initWithName:@"Math Club "]];
+>>>>>>> origin/master
 //    s = [[NSMutableArray alloc] init];
 //    [s addObject:@"David Valdez"];
 //    [_clubs addObject: [[club alloc] initWithName:@"Model UN "]];
@@ -354,8 +497,13 @@
 //    [s addObject:@"Michael Mazenko"];
 //    [_clubs addObject: [[club alloc] initWithName:@"Youth Advisory Board "]];
 //    
+<<<<<<< HEAD
     
     
+=======
+//    
+//    
+>>>>>>> origin/master
     
     
     
