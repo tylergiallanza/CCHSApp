@@ -14,6 +14,7 @@
 		3F1B0AAE1AF7AC1000A511D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */; };
 		3F1B0AB11AF7AC1000A511D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AAF1AF7AC1000A511D5 /* LaunchScreen.xib */; };
 		3F1B0ABD1AF7AC1000A511D5 /* CCHS_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0ABC1AF7AC1000A511D5 /* CCHS_AppTests.m */; };
+		3FDC4E741B0A1FD3005CF81F /* Collab.docx in Resources */ = {isa = PBXBuildFile; fileRef = 3FDC4E731B0A1FD3005CF81F /* Collab.docx */; };
 		3FE5C59F1AFA4FD900758162 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */; };
 		3FE5C5A21AFA4FF100758162 /* BellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A11AFA4FF100758162 /* BellViewController.m */; };
 		3FE5C5A51AFA501B00758162 /* FacultyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A41AFA501B00758162 /* FacultyViewController.m */; };
@@ -48,6 +49,7 @@
 		3F1B0AB61AF7AC1000A511D5 /* CCHS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CCHS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1B0ABB1AF7AC1000A511D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1B0ABC1AF7AC1000A511D5 /* CCHS_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCHS_AppTests.m; sourceTree = "<group>"; };
+		3FDC4E731B0A1FD3005CF81F /* Collab.docx */ = {isa = PBXFileReference; lastKnownFileType = file; name = Collab.docx; path = ../../../../../Users/student/Desktop/Collab.docx; sourceTree = "<group>"; };
 		3FE5C59D1AFA4FD900758162 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		3FE5C5A01AFA4FF100758162 /* BellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BellViewController.h; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */,
 				3FE5C5A01AFA4FF100758162 /* BellViewController.h */,
 				3FE5C5A11AFA4FF100758162 /* BellViewController.m */,
+				3FDC4E731B0A1FD3005CF81F /* Collab.docx */,
 				9AF364F11B07F1C80083806A /* BellBackground.h */,
 				9AF364F21B07F1C80083806A /* BellBackground.m */,
 				3F1B0AA51AF7AC1000A511D5 /* AppDelegate.m */,
@@ -239,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDC4E741B0A1FD3005CF81F /* Collab.docx in Resources */,
 				3F1B0AAC1AF7AC1000A511D5 /* Main.storyboard in Resources */,
 				3F1B0AB11AF7AC1000A511D5 /* LaunchScreen.xib in Resources */,
 				3F1B0AAE1AF7AC1000A511D5 /* Images.xcassets in Resources */,
