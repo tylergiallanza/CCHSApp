@@ -12,4 +12,9 @@
 
 - (id)initWithDetails: (NSString*) n and: (NSString*) t and: (NSString*) day and: (NSString*) place and: (NSArray*) spon;
 -(NSString *) getName;
+-(NSString *) getTime;
+-(NSString *) getDay;
+-(NSString *) getPlace;
+-(NSArray *) getSponsers;
+
 @end

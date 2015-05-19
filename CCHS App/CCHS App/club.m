@@ -30,6 +30,11 @@
     if(self){
      
         _name = n;
+        _meetingTime = t;
+        _meetingDay = day;
+        _meetingPlace = place;
+        _sponsers = spon;
+        
     
     }
     return self;
@@ -37,6 +42,20 @@
 
 -(NSString *) getName{
     return _name;
+}
+
+-(NSString *) getTime{
+    return _meetingTime;
+}
+-(NSString *) getDay{
+    return _meetingDay;
+}
+-(NSArray *) getSponsers{
+    return _sponsers;
+}
+
+-(NSString *) getPlace{
+    return _meetingPlace;
 }
 
 
