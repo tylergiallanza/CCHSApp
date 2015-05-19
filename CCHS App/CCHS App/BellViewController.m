@@ -98,12 +98,11 @@ static BOOL Assembly;
     [self.CollabDates addObject: @"3/18/15"];
     [self.CollabDates addObject: @"4/15/15"];
     
-    //[self.AssemblyDates addObject: @"5/19/15"];
+    [self.AssemblyDates addObject: @"5/19/15"];
 }
 
 - (void) processTimes: (NSString *) time and: (NSMutableArray*) schedule{
     
-    time = @"3:01 PM";
     time = [self convertToMilitary:time and:NO];
     NSString *symbol = [time substringFromIndex:time.length-2];
     time = [time substringToIndex:time.length-3];

@@ -170,7 +170,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBV-n7-EvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673.5" y="360.5"/>
+            <point key="canvasLocation" x="656.5" y="360.5"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="mtx-bm-Wib">
@@ -301,7 +301,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kla-8f-Zxd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Bell Schedule" id="JyQ-qA-a7n"/>
+                                    <navigationItem title="Bell Schedule" id="JyQ-qA-a7n">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="hbT-3s-51X">
+                                            <connections>
+                                                <segue destination="GpU-vM-vK3" kind="presentation" modalTransitionStyle="crossDissolve" id="iQs-pG-LkH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-62-Ose" customClass="Schedule">
@@ -595,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4a-sB-jn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672.75" y="1987.125"/>
+            <point key="canvasLocation" x="593.25" y="1974.375"/>
         </scene>
         <!--Delay-->
         <scene sceneID="hxQ-kw-MUD">
@@ -612,7 +618,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWT-UB-ijs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Bell Schedule" id="bg7-sI-E31"/>
+                                    <navigationItem title="Bell Schedule" id="bg7-sI-E31">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="gcy-uK-hhf">
+                                            <connections>
+                                                <segue destination="GpU-vM-vK3" kind="presentation" modalTransitionStyle="crossDissolve" id="gHu-xN-Zkn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Storm / Delayed Start Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1x-89-9JA">
@@ -878,7 +890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIy-iM-3Xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310.25" y="1987.125"/>
+            <point key="canvasLocation" x="1239.75" y="1978.125"/>
         </scene>
         <!--Collaboration-->
         <scene sceneID="DRh-q3-5LM">
@@ -895,7 +907,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yS-bd-xzm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Bell Schedule" id="Mro-Q5-J61"/>
+                                    <navigationItem title="Bell Schedule" id="Mro-Q5-J61">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="OtW-qB-XDT">
+                                            <connections>
+                                                <segue destination="GpU-vM-vK3" kind="presentation" modalTransitionStyle="crossDissolve" id="DN1-zf-BrZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Collaboration Day Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9H-aO-Pk3">
@@ -1312,7 +1330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bF-Hq-Y28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923.75" y="1987.125"/>
+            <point key="canvasLocation" x="1922.25" y="1978.125"/>
         </scene>
         <!--Assembly-->
         <scene sceneID="4NZ-Tc-R1L">
@@ -1326,13 +1344,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW8-8D-CXv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Bell Schedule" id="2ay-F4-wKX"/>
-                                </items>
-                            </navigationBar>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-fH-EQo" customClass="Assembly">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-fH-EQo" customClass="Assembly">
                                 <rect key="frame" x="47" y="103" width="281" height="494"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbR-Za-0bM">
@@ -1398,13 +1410,13 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="7:10 - 7:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6r-Rd-fXs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7:10 - 7:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6r-Rd-fXs">
                                         <rect key="frame" x="151" y="104" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8:01 - 8:46" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th4-1L-W30">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:01 - 8:46" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th4-1L-W30">
                                         <rect key="frame" x="151" y="151" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1416,31 +1428,31 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="9:46 - 10:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZ8-r1-kPv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:46 - 10:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZ8-r1-kPv">
                                         <rect key="frame" x="151" y="243" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10:37 - 11:21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ard-WA-R8a">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:37 - 11:21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ard-WA-R8a">
                                         <rect key="frame" x="151" y="288" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="11:28 - 12:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJQ-cp-mbJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:28 - 12:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJQ-cp-mbJ">
                                         <rect key="frame" x="151" y="333" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6:30 - 7:09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlQ-Ye-HO8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:30 - 7:09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlQ-Ye-HO8">
                                         <rect key="frame" x="151" y="57" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12:19 - 1:03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-nd-AZl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:19 - 1:03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-nd-AZl">
                                         <rect key="frame" x="151" y="378" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1455,13 +1467,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assembly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLh-zk-oOc">
-                                        <rect key="frame" x="18" y="418" width="95" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2:01 - 2:51" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dH-Sx-ZSu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:01 - 2:51" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dH-Sx-ZSu">
                                         <rect key="frame" x="376" y="418" width="123" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1470,8 +1476,14 @@
                                             <rect key="frame" x="171" y="466" width="122" height="21"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1:10 - 1:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gO-rM-AmM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:10 - 1:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gO-rM-AmM">
                                         <rect key="frame" x="151" y="423" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assembly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLh-zk-oOc">
+                                        <rect key="frame" x="18" y="423" width="95" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -1500,7 +1512,7 @@
                                     <constraint firstItem="I6r-Rd-fXs" firstAttribute="leading" secondItem="vIj-mb-XiV" secondAttribute="leading" id="Eh2-xx-MgV"/>
                                     <constraint firstItem="gNJ-JQ-3Mb" firstAttribute="centerX" secondItem="Rd5-Tr-rgg" secondAttribute="centerX" id="FBS-Lz-xQz"/>
                                     <constraint firstItem="gNJ-JQ-3Mb" firstAttribute="centerX" secondItem="TzP-Tb-6lV" secondAttribute="centerX" id="GdY-nr-hxz"/>
-                                    <constraint firstItem="5dH-Sx-ZSu" firstAttribute="baseline" secondItem="nLh-zk-oOc" secondAttribute="baseline" id="GjF-eU-5sr"/>
+                                    <constraint firstItem="5dH-Sx-ZSu" firstAttribute="baseline" secondItem="nLh-zk-oOc" secondAttribute="baseline" constant="-5" id="GjF-eU-5sr"/>
                                     <constraint firstItem="gNJ-JQ-3Mb" firstAttribute="leading" secondItem="IRA-fH-EQo" secondAttribute="leading" constant="31" id="HN1-Wy-LVH">
                                         <variation key="heightClass=regular-widthClass=compact" constant="36"/>
                                     </constraint>
@@ -1510,7 +1522,7 @@
                                     <constraint firstItem="Rd5-Tr-rgg" firstAttribute="top" secondItem="TzP-Tb-6lV" secondAttribute="bottom" constant="22" id="IEw-t0-kF3">
                                         <variation key="heightClass=regular-widthClass=compact" constant="27"/>
                                     </constraint>
-                                    <constraint firstItem="ShL-nd-AZl" firstAttribute="top" secondItem="UJQ-cp-mbJ" secondAttribute="bottom" constant="13" id="Jce-U4-YNa">
+                                    <constraint firstItem="ShL-nd-AZl" firstAttribute="top" secondItem="UJQ-cp-mbJ" secondAttribute="bottom" constant="24" id="Jce-U4-YNa">
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="MmW-Yp-Saq" firstAttribute="centerX" secondItem="ard-WA-R8a" secondAttribute="centerX" id="Jeb-lt-3V1">
@@ -1520,11 +1532,11 @@
                                     <constraint firstItem="TzP-Tb-6lV" firstAttribute="top" secondItem="UD0-wW-7Hp" secondAttribute="bottom" constant="30" id="LRv-95-QbY">
                                         <variation key="heightClass=regular-widthClass=compact" constant="21"/>
                                     </constraint>
-                                    <constraint firstItem="5dH-Sx-ZSu" firstAttribute="leading" secondItem="ShL-nd-AZl" secondAttribute="leading" id="NRK-6d-Utn">
+                                    <constraint firstItem="5dH-Sx-ZSu" firstAttribute="leading" secondItem="ShL-nd-AZl" secondAttribute="leading" constant="225" id="NRK-6d-Utn">
                                         <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
                                     </constraint>
                                     <constraint firstItem="L7N-MC-H0R" firstAttribute="top" secondItem="UIg-dz-nFX" secondAttribute="bottom" constant="26" id="PEA-Z7-5vt"/>
-                                    <constraint firstItem="5dH-Sx-ZSu" firstAttribute="trailing" secondItem="IRA-fH-EQo" secondAttribute="trailingMargin" id="QRh-uY-XNS">
+                                    <constraint firstItem="5dH-Sx-ZSu" firstAttribute="trailing" secondItem="IRA-fH-EQo" secondAttribute="trailingMargin" constant="226" id="QRh-uY-XNS">
                                         <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
                                     </constraint>
                                     <constraint firstItem="UIg-dz-nFX" firstAttribute="leading" secondItem="KbR-Za-0bM" secondAttribute="leading" id="Qzi-jS-HZ9"/>
@@ -1552,23 +1564,23 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="21"/>
                                     </constraint>
                                     <constraint firstItem="8mV-jf-hF0" firstAttribute="leading" secondItem="cyH-lb-hPX" secondAttribute="leading" id="ahF-dv-h34"/>
-                                    <constraint firstItem="WlQ-Ye-HO8" firstAttribute="top" secondItem="MmW-Yp-Saq" secondAttribute="bottom" constant="18" id="aq2-3G-qos">
+                                    <constraint firstItem="WlQ-Ye-HO8" firstAttribute="top" secondItem="MmW-Yp-Saq" secondAttribute="bottom" constant="22" id="aq2-3G-qos">
                                         <variation key="heightClass=regular-widthClass=compact" constant="22"/>
                                     </constraint>
                                     <constraint firstItem="gNJ-JQ-3Mb" firstAttribute="centerX" secondItem="UIg-dz-nFX" secondAttribute="centerX" id="cQF-zN-UFE"/>
-                                    <constraint firstItem="yZ8-r1-kPv" firstAttribute="top" secondItem="vIj-mb-XiV" secondAttribute="bottom" constant="26" id="d4a-R0-DNL">
+                                    <constraint firstItem="yZ8-r1-kPv" firstAttribute="top" secondItem="vIj-mb-XiV" secondAttribute="bottom" constant="24" id="d4a-R0-DNL">
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="I6r-Rd-fXs" firstAttribute="leading" secondItem="3gO-rM-AmM" secondAttribute="leading" id="dxA-n6-XAK"/>
                                     <constraint firstItem="MmW-Yp-Saq" firstAttribute="centerX" secondItem="vIj-mb-XiV" secondAttribute="centerX" id="e5h-fa-ack">
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
-                                    <constraint firstAttribute="bottom" secondItem="5dH-Sx-ZSu" secondAttribute="bottom" id="gFf-4S-fOW">
+                                    <constraint firstAttribute="bottom" secondItem="5dH-Sx-ZSu" secondAttribute="bottom" constant="55" id="gFf-4S-fOW">
                                         <variation key="heightClass=regular-widthClass=compact" constant="130"/>
                                     </constraint>
                                     <constraint firstItem="UIg-dz-nFX" firstAttribute="leading" secondItem="L7N-MC-H0R" secondAttribute="leading" id="gGq-yT-zSH"/>
                                     <constraint firstItem="nLh-zk-oOc" firstAttribute="centerX" secondItem="ibJ-zF-TSL" secondAttribute="centerX" id="hnp-hY-RVZ"/>
-                                    <constraint firstItem="UJQ-cp-mbJ" firstAttribute="top" secondItem="ard-WA-R8a" secondAttribute="bottom" constant="26" id="k9W-Ho-Wac">
+                                    <constraint firstItem="UJQ-cp-mbJ" firstAttribute="top" secondItem="ard-WA-R8a" secondAttribute="bottom" constant="24" id="k9W-Ho-Wac">
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="th4-1L-W30" firstAttribute="top" secondItem="I6r-Rd-fXs" secondAttribute="bottom" constant="26" id="kPD-RS-nfh"/>
@@ -1587,7 +1599,7 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="nLh-zk-oOc" firstAttribute="leading" secondItem="IRA-fH-EQo" secondAttribute="leading" constant="18" id="qYp-ad-KG1"/>
-                                    <constraint firstItem="ard-WA-R8a" firstAttribute="baseline" secondItem="Rd5-Tr-rgg" secondAttribute="baseline" constant="4" id="rU0-lY-ypy">
+                                    <constraint firstItem="ard-WA-R8a" firstAttribute="baseline" secondItem="Rd5-Tr-rgg" secondAttribute="baseline" id="rU0-lY-ypy">
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="MmW-Yp-Saq" firstAttribute="centerX" secondItem="ShL-nd-AZl" secondAttribute="centerX" id="rd6-0F-2zw">
@@ -1598,7 +1610,7 @@
                                     </constraint>
                                     <constraint firstItem="UD0-wW-7Hp" firstAttribute="leading" secondItem="TzP-Tb-6lV" secondAttribute="leading" id="tdV-Fh-l2i"/>
                                     <constraint firstItem="L7N-MC-H0R" firstAttribute="leading" secondItem="UD0-wW-7Hp" secondAttribute="leading" id="tts-yD-fGk"/>
-                                    <constraint firstItem="3gO-rM-AmM" firstAttribute="top" secondItem="ShL-nd-AZl" secondAttribute="bottom" constant="8" id="u1t-Kz-8il">
+                                    <constraint firstItem="3gO-rM-AmM" firstAttribute="top" secondItem="ShL-nd-AZl" secondAttribute="bottom" constant="24" id="u1t-Kz-8il">
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="I6r-Rd-fXs" secondAttribute="trailing" constant="13" id="uqk-ou-hXK">
@@ -1606,7 +1618,7 @@
                                     </constraint>
                                     <constraint firstItem="gNJ-JQ-3Mb" firstAttribute="top" secondItem="IRA-fH-EQo" secondAttribute="top" constant="14" id="wja-rU-RRs"/>
                                     <constraint firstItem="I6r-Rd-fXs" firstAttribute="leading" secondItem="WlQ-Ye-HO8" secondAttribute="leading" id="xtl-5F-BSs"/>
-                                    <constraint firstItem="I6r-Rd-fXs" firstAttribute="baseline" secondItem="UIg-dz-nFX" secondAttribute="baseline" constant="-4" id="yJX-10-RAs">
+                                    <constraint firstItem="I6r-Rd-fXs" firstAttribute="baseline" secondItem="UIg-dz-nFX" secondAttribute="baseline" id="yJX-10-RAs">
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="8mV-jf-hF0" firstAttribute="leading" secondItem="ibJ-zF-TSL" secondAttribute="leading" id="yor-fc-Nq9"/>
@@ -1636,7 +1648,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assembly Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceV-Nl-gQn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assembly Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceV-Nl-gQn">
                                 <rect key="frame" x="46" y="62" width="285" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="285" id="lvW-qU-9dW"/>
@@ -1644,20 +1656,35 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="47" y="62" width="285" height="21"/>
+                                </variation>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW8-8D-CXv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Bell Schedule" id="2ay-F4-wKX">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="dwH-Vc-0Xk">
+                                            <connections>
+                                                <segue destination="GpU-vM-vK3" kind="presentation" modalTransitionStyle="crossDissolve" id="btl-aR-bpD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ceV-Nl-gQn" firstAttribute="centerX" secondItem="wW8-8D-CXv" secondAttribute="centerX" id="2Hn-oE-DGI"/>
-                            <constraint firstItem="g30-xX-Vrg" firstAttribute="top" secondItem="IRA-fH-EQo" secondAttribute="bottom" constant="24" id="37Y-TB-dqO">
+                            <constraint firstItem="ceV-Nl-gQn" firstAttribute="centerX" secondItem="wW8-8D-CXv" secondAttribute="centerX" constant="1" id="2Hn-oE-DGI"/>
+                            <constraint firstItem="g30-xX-Vrg" firstAttribute="top" secondItem="IRA-fH-EQo" secondAttribute="bottom" constant="21" id="37Y-TB-dqO">
                                 <variation key="heightClass=regular-widthClass=compact" constant="21"/>
                             </constraint>
-                            <constraint firstItem="ceV-Nl-gQn" firstAttribute="centerX" secondItem="IRA-fH-EQo" secondAttribute="centerX" id="9TF-ho-DdN"/>
-                            <constraint firstItem="ceV-Nl-gQn" firstAttribute="top" secondItem="wW8-8D-CXv" secondAttribute="bottom" constant="15" id="C0g-aq-qj6">
+                            <constraint firstItem="ceV-Nl-gQn" firstAttribute="centerX" secondItem="IRA-fH-EQo" secondAttribute="centerX" constant="1" id="9TF-ho-DdN"/>
+                            <constraint firstItem="ceV-Nl-gQn" firstAttribute="top" secondItem="wW8-8D-CXv" secondAttribute="bottom" constant="18" id="C0g-aq-qj6">
                                 <variation key="heightClass=regular-widthClass=compact" constant="18"/>
                             </constraint>
                             <constraint firstItem="IRA-fH-EQo" firstAttribute="leading" secondItem="W2f-Pd-J03" secondAttribute="leadingMargin" constant="31" id="GPx-ma-Kid"/>
-                            <constraint firstItem="IRA-fH-EQo" firstAttribute="top" secondItem="ceV-Nl-gQn" secondAttribute="bottom" constant="8" id="JkU-AG-lFD">
+                            <constraint firstItem="IRA-fH-EQo" firstAttribute="top" secondItem="ceV-Nl-gQn" secondAttribute="bottom" constant="20" id="JkU-AG-lFD">
                                 <variation key="heightClass=regular-widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="wW8-8D-CXv" secondAttribute="trailing" id="mij-tY-lNN"/>
@@ -1669,7 +1696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buB-3X-3ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2550.75" y="1987.125"/>
+            <point key="canvasLocation" x="2607.75" y="1978.125"/>
         </scene>
         <!--Current-->
         <scene sceneID="6kA-Rk-EeS">
@@ -1695,7 +1722,14 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkf-YQ-iaQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Bell Schedule" id="201-Gt-omX"/>
+                                    <navigationItem title="Bell Schedule" id="201-Gt-omX">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="cEe-E7-ai4"/>
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="K6S-Oz-ZrN">
+                                            <connections>
+                                                <segue destination="GpU-vM-vK3" kind="presentation" modalTransitionStyle="crossDissolve" id="krC-ey-YHH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Period:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InK-23-dSy">
@@ -2014,7 +2048,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPT-lu-7pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.5" y="1986.5"/>
+            <point key="canvasLocation" x="-84.75" y="1974.375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="a9a-yp-UUm">
@@ -2036,7 +2070,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BM-ca-r5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281.5" y="1172.5"/>
+            <point key="canvasLocation" x="1279.5" y="1162.5"/>
         </scene>
     </scenes>
     <resources>
@@ -2048,4 +2082,7 @@
         <image name="bell icon" width="121" height="121"/>
         <image name="calendar icon" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="btl-aR-bpD"/>
+    </inferredMetricsTieBreakers>
 </document>
