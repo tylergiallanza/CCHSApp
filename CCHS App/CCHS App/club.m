@@ -15,7 +15,7 @@
 @property NSString *meetingDay;
 @property NSString *meetingTime;
 @property NSString *meetingPlace;
-@property NSArray *nicknames;
+//@property NSArray *nicknames;
 
 
 @end

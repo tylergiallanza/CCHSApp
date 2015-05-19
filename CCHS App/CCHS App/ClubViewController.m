@@ -26,6 +26,12 @@
         // lis of clubs?
     //}
     
+    //reasons why I did this the hard way
+        //the file has the times all in different format and that bothered me so I would have to change that any way
+        //some of the clubs are not really clubs but classes so those needed to be taken out
+        //the days are also writen in different formats and would have to be changed
+        //there are cpitalization issues in the file
+        //the file is formated wierd making it hard to read
     NSMutableArray *s = [[NSMutableArray alloc] init];
     [s addObject:@"Lucas Nkwelle"];
     [_clubs addObject: [[club alloc] initWithDetails: @"4 Quarters 4 Kids" and: @"" and: @"Every other Tuesday" and: @"W92" and: s]];
@@ -40,7 +46,7 @@
     [s addObject:@"Jose Murillo"];
     [_clubs addObject: [[club alloc] initWithDetails:@"ALMA" and:@"" and:@"First Thursday of each month" and:@"Counseling Office" and:s]];
     s = [[NSMutableArray alloc] init];
-    [s addObject:@"kerstin daum-Schultz"];
+    [s addObject:@"Kerstin Daum-Schultz"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Amnesty International" and: @"3:00 to 4:00 pm" and:@"Every other Monday" and:@"IC742" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"David Stallings"];
@@ -208,17 +214,17 @@
 
     s = [[NSMutableArray alloc] init];
     [s addObject:@"David Valdez"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Model UN " and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Model UN" and:@"3:00 to 4:00 pm" and:@"Thursday" and:@"IC738" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Gina Guy"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Muslim Student Alliance" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Joelle Hogue"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"My Little Pony Club" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"My Little Pony Club" and:@"3:00 to 4:00 pm" and:@"Every other Thursday" and:@"W551" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"David Stallings"];
      [s addObject:@"Efong Yee"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"National Art Honor Society" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"National Art Honor Society" and:@"3:00 to 4:00 pm" and:@"Every other Wednesday" and:@"FA603" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Martha Benham"];
      [s addObject:@"Erin Baxley"];
@@ -226,40 +232,40 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Renee Dupont"];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Nourish International "]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"Nancy Eads"];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Open Arms "]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"Lisa Wiese"];
-//    [s addObject:@"N.Jasurda"];
-//    [s addObject:@"S.Johnson"];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Peer Ambassadors "]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"Tim Libby"];
-//     [s addObject:@"Allison Greenbaum"];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Percussion Ensemble"]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"Todd Adams"];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Photography Club"]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"Clyde Oakley "];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Physics Club "]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"TBD"];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Pinterest "]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"Karl Mimmack "];
-//    [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s@"Play Strong"]];
-//    s = [[NSMutableArray alloc] init];
-//    [s addObject:@"Matt Gustafson "];
-//    [_clubs addObject: [[club alloc] initWithName:@"Poetry Club "]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Nourish International" and:@"3:00 pm" and:@"Every other Tuesday" and:@"E203" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"Nancy Eads"];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Open Arms" and:@"" and:@"" and:@"" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"Lisa Wiese"];
+    [s addObject:@"N.Jasurda"];
+    [s addObject:@"S.Johnson"];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Peer Ambassadors" and:@"5th period" and:@"Tuesday" and:@"IC736" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"Tim Libby"];
+     [s addObject:@"Allison Greenbaum"];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Percussion Ensemble" and:@"3:30 to 6:30 pm" and:@"Monday and Wednesday" and:@"FA640" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"Todd Adams"];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Photography Club" and:@"3:15 to 4:15 pm" and:@"Wednesday (2nd semester)" and:@"CTE" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"Clyde Oakley "];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Physics Club" and:@"3:00 pm" and:@"" and:@"W527" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"TBD"];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Pinterest" and:@"" and:@"" and:@"" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"Karl Mimmack "];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Play Strong" and:@"6:20 to 7:00 am" and:@"Thursday" and:@"W435" and:s]];
+    s = [[NSMutableArray alloc] init];
+    [s addObject:@"Matt Gustafson "];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Poetry Club" and:@"3:00 pm" and:@"Every other Thursday" and:@"IC746" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"TBD"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Pokemon Club" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Krista Keogh"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"President's Club" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"President's Club" and:@"5th period" and:@"Thursday" and:@"South Community Rooom" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Kent Dertinger"];
     [s addObject:@"Kim Dertinger"];
@@ -269,33 +275,33 @@
     [s addObject:@"Jill Carlson"];
      [s addObject:@"Chris Danos"];
     [s addObject:@"Kevin Harrell"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Robotics Team Club" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Robotics Team Club" and:@"" and:@"Monday, Tuesday, Wednesday, Thursday, and Saturday" and:@"W557/W431" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Michael Goodman"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"S.A.C.A." and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"S.A.C.A." and:@"3:00 to 3:30 pm" and:@"Mondays" and:@"W214" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Christine Garcia"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Suicide Prevention of Teens" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Suicide Prevention of Teens (SPOT)" and:@"3:00 to 4:00 pm" and:@"Tuesday" and:@"W104" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Jeremy Gilbert "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Science Bowl" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Science Bowl" and:@"3:00 to 4:00 pm" and:@"Wednesday" and:@"W105" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Clyde Oakley"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Science Olympiad" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Science Olympiad" and:@"3:00 pm" and:@"Friday" and:@"W527" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Jen Jones "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Sign Language Club" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Sign Language Club" and:@"3:00 to 4:30 pm" and:@"Every other Thursday" and:@"IC740" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"M.Goeglein"];
     [s addObject:@"T.Morris"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"SOAR" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"SOAR" and:@"3:15 to 4:30 pm" and:@"First Tuesday of the month" and:@"W201" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"TBD"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Social Seminar" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Catie Broznak"];
     [s addObject:@"Kevin Horrell "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Space Settlement Design Club" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Space Settlement Design Club" and:@"3:00 to 5:00 pm" and:@"Wednesday (Monday first quarter)" and:@"W531" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"TBD"];
     [_clubs addObject: [[club alloc] initWithDetails: @"Spanish Club" and:@"" and:@"" and:@"" and:s]];
@@ -304,12 +310,12 @@
     [s addObject:@"Sarah Campbell"];
     [_clubs addObject: [[club alloc] initWithDetails: @"Spanish Honor Society" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
-    [s addObject:@"Kerstin Daum Schultz"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Spectrum-Gay/Straight" and:@"" and:@"" and:@"" and:s]];
+    [s addObject:@"Kerstin Daum-Schultz"];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Spectrum-Gay/Straight" and:@"3:00 to 4:00 pm" and:@"Every other Monday" and:@"W531" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Marti Benham"];
     [s addObject:@"Carlye Holladay"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Speech and Debate" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Speech and Debate" and:@"" and:@"" and:@"FA625" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"David Knoeckel"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Sports Broadcasting Club" and:@"" and:@"" and:@"" and:s]];
@@ -319,7 +325,7 @@
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Krista Keogh"];
     [s addObject:@"Matt Weiss"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Student Senate" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Student Senate" and:@"8th period" and:@"Monday through Friday" and:@"IC715" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Jim Miller"];
     [s addObject:@"Mhari Doyle"];
@@ -329,32 +335,32 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"Tech Club" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Loreen Hughes "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Union Street Journal" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Union Street Journal" and:@"3:00 to 4:30 pm" and:@"Two Mondays a month" and:@"1C703" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"TBD"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Video Game Club " and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Tim Libby"];
     [s addObject:@"Mark Keating"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Winter Guard" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Winter Guard" and:@"3:30 to 6:30pm" and:@"Monday through Friday" and:@"FA640" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Jim Young "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Writing Club" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Writing Club" and:@"3:00 to 4:00 pm" and:@"" and:@"E300" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Erica Padzik "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Yearbook" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Yearbook" and:@"8th period" and:@"Monday through Friday" and:@"IC705" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Dave Benson"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Young Democrats" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Young Democrats" and:@"3:00 pm" and:@"Every other Monday" and:@"E113" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Tandy Babb "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Young Life Club" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Young Life Club" and:@"7:00 to 9:00 pm" and:@"Monday" and:@"IC Café" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Tom Michel "];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Young Politicians" and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Young Politicians" and:@"3:00 to 4:30pm" and:@"" and:@"E401" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Michael Mazenko"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Youth Advisory Board " and:@"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Youth Advisory Board" and:@"3:00 to 4:00 pm" and:@"Monday" and:@"IC715" and:s]];
 //
 
     
@@ -406,15 +412,18 @@
         if(i == 0){
             s = [NSString stringWithFormat: @"%@", [[c getSponsers] objectAtIndex: i]];;
         }else if((i + 1) == [[c getSponsers] count]){
-            s = [NSString stringWithFormat: @"%@, and %@", s, [[c getSponsers] objectAtIndex: i]];
+            if(i == 1){
+                s = [NSString stringWithFormat: @"%@ and %@", s, [[c getSponsers] objectAtIndex: i]];
+            }else{
+                s = [NSString stringWithFormat: @"%@, and %@", s, [[c getSponsers] objectAtIndex: i]];
+            }
         }else{
             s = [NSString stringWithFormat: @"%@, %@", s, [[c getSponsers] objectAtIndex: i]];
         }
     }
     NSString *str = [NSString stringWithFormat:@"%@ \n %@ \n %@ \n\n Sponser(s): %@",[c getTime], [c getDay], [c getPlace], s];
-    //NSString *str = [NSString stringWithFormat:@"%@  \n\n",[c getTime]];
-
-    NSLog(@"%@", str);
+    
+  
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[c getName] message: str delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
     
 //    UITextView *someTextView = [[UITextView alloc] initWithFrame:CGRectMake(15, 35, 250, 100)];
