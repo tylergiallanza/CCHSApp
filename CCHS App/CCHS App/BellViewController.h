@@ -10,4 +10,6 @@
 
 @interface BellViewController : UIViewController
 
++ (BOOL) Assembly;
+
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1683,7 +1683,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Period" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33c-RJ-CZp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33c-RJ-CZp">
                                 <rect key="frame" x="138" y="62" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="aJo-e1-mOW"/>
@@ -1979,6 +1979,7 @@
                         <outlet property="CurPeriod" destination="33c-RJ-CZp" id="UyT-Yk-FRd"/>
                         <outlet property="CurSchedule" destination="zez-JN-ZwM" id="uit-rj-kM3"/>
                         <outlet property="CurTime" destination="JkX-m5-MBe" id="pd2-5m-ZEa"/>
+                        <outlet property="Per11" destination="10e-h7-oow" id="8kq-sz-FJG"/>
                         <outletCollection property="Times" destination="Q4i-Bu-mj7" collectionClass="NSMutableArray" id="P40-eQ-fXk"/>
                         <outletCollection property="Times" destination="qdr-mp-Lso" collectionClass="NSMutableArray" id="OPh-PR-MU1"/>
                         <outletCollection property="Times" destination="zUv-5Z-0Qa" collectionClass="NSMutableArray" id="4V0-jP-M9P"/>
