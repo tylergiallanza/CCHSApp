@@ -24,6 +24,8 @@ static BOOL Assembly;
 @property NSMutableArray *CollabDates;
 @property NSMutableArray *AssemblyDates;
 @property NSMutableArray *Schedule;
+@property (weak, nonatomic) IBOutlet UILabel *AssemblyPer;
+@property (weak, nonatomic) IBOutlet UILabel *AssemblyTime;
 
 @end
 
@@ -45,6 +47,8 @@ static BOOL Assembly;
     self.date = [[NSDate alloc] init];
     self.CollabDates = [[NSMutableArray alloc] init];
     self.AssemblyDates = [[NSMutableArray alloc] init];
+    self.AssemblyPer.hidden = YES;
+    self.AssemblyTime.hidden = YES;
     Assembly = NO;
     [self addDates];
     [self loadTimes];
@@ -57,13 +61,13 @@ static BOOL Assembly;
     dateFormatter.timeStyle = NSDateFormatterNoStyle;
     NSString *curDay = [dateFormatter stringFromDate:self.date];
     NSLog(curDay);
-    
+    curTime = [self convertToMilitary:curTime and:NO];
     for(int i = 0; i<self.CollabDates.count; i++){
         NSString *day = [self.CollabDates objectAtIndex:i];
         if([curDay isEqualToString:day]){
             self.CurSchedule.text = @"Collaboration Day Schedule";
             self.Schedule = self.CollabTimes;
-            self.Per11.text = @"Collaboration \nPeriod";
+            self.Per11.text = @"Collaboration";
         }
     }
     for(int i = 0; i<self.AssemblyDates.count; i++){
@@ -71,17 +75,19 @@ static BOOL Assembly;
         if([curDay isEqualToString:day]){
             self.CurSchedule.text = @"Assembly Schedule";
             self.Schedule = self.AssemblyTimes;
+            self.AssemblyTime.hidden = NO;
+            self.AssemblyPer.hidden = NO;
             Assembly = YES;
         }
     }
-    
-    for(int i = 0; i<self.Schedule.count; i++){
+    //  self.Schedule = self.AssemblyTimes;
+    for(int i = 0; i<self.Times.count; i++){
         UILabel *label = [self.Times objectAtIndex:i];
         label.text = [self.Schedule objectAtIndex:i];
     }
     
     [self processTimes:curTime and:self.Schedule];
-
+    
 }
 
 - (void) addDates{
@@ -92,18 +98,34 @@ static BOOL Assembly;
     [self.CollabDates addObject: @"3/18/15"];
     [self.CollabDates addObject: @"4/15/15"];
     
+    //[self.AssemblyDates addObject: @"5/19/15"];
 }
 
 - (void) processTimes: (NSString *) time and: (NSMutableArray*) schedule{
     
+    time = @"3:01 PM";
+    time = [self convertToMilitary:time and:NO];
     NSString *symbol = [time substringFromIndex:time.length-2];
+    time = [time substringToIndex:time.length-3];
+    NSLog(time);
     if([symbol isEqualToString:@"PM"]){
-         if(![[time substringToIndex:2] isEqualToString:@"12"]){
-             time = [self convertToMilitary:time];
-         }
+        if(![[time substringToIndex:2] isEqualToString:@"12"]){
+            int index = 0;
+            for(int i = 0; i<time.length; i++){
+                if([time characterAtIndex:i] == ':'){
+                    index = i;
+                }
+            }
+            NSString *hr = [time substringToIndex:index];
+            int hour = [hr intValue];
+            hour += 12;
+            time = [NSString stringWithFormat:@"%d%@", hour, [time substringFromIndex:index]];
+            //time = [self convertToMilitary:time and: YES];
+            NSLog(@"HI");
+        }
     }else{
         if([[time substringToIndex:2] isEqualToString:@"12"]){
-            time = [self convertToMilitary: time];
+            time = [NSString stringWithFormat:@"%@%@", @"00", [time substringFromIndex:2]];
         }
     }
     
@@ -112,34 +134,40 @@ static BOOL Assembly;
     for(int i = 0; i<first.length; i++){
         if([first characterAtIndex:i] == ' '){
             index = i;
+            break;
         }
     }
-    NSString *compTime = [[schedule objectAtIndex:0] substringToIndex:index];
+    NSString *compTime = [first substringToIndex:index];
+    compTime = [self convertToMilitary:compTime and:NO];
     NSComparisonResult result = [time compare: compTime];
-    if(result == NSOrderedAscending || result == NSOrderedSame){
+    if(result == NSOrderedDescending || result == NSOrderedSame){
         self.CurTime.text = [schedule objectAtIndex:0];
+        self.CurPeriod.text = @"Period 11";
     }else{
-        self.CurTime.hidden = YES;
-        self.CurPeriod.text = @"Nothing currently.";
-
+        self.CurTime.text = @"Currently";
+        self.CurPeriod.text = @"Nothing";
+        
     }
     for(int i = 0; i<schedule.count-1; i++){
-        result = [time compare: [self convertToMilitary: [self getTime: [schedule objectAtIndex:i]]]];
+        result = [time compare: [self convertToMilitary: [self getTime: [schedule objectAtIndex:i]] and: YES]];
         if(result == NSOrderedDescending){
             self.CurTime.text = [schedule objectAtIndex:i+1];
-            if(i==0){
-                self.CurPeriod.text = @"Period 11";
-            }else if(i==10){
+            if(i==10){
                 self.CurPeriod.text = @"Assembly";
             }else{
-                self.CurPeriod.text = [NSString stringWithFormat:@"%s%d", "Period ", i];
+                self.CurPeriod.text = [NSString stringWithFormat:@"%s%d", "Period ", i+1];
             }
+        }else{
+            break;
         }
     }
-    result = [time compare: [self convertToMilitary: [self getTime: [schedule objectAtIndex:schedule.count-1]]]];
+    NSString *mil = [self convertToMilitary: [self getTime: [schedule objectAtIndex:schedule.count-1]] and:YES];
+    
+    result = [time compare: [self convertToMilitary: [self getTime: [schedule objectAtIndex:schedule.count-1]] and: YES]];
+    result = [time compare: mil];
     if(result == NSOrderedDescending){
-        self.CurTime.hidden = YES;
-        self.CurPeriod.text = @"Nothing currently.";
+        self.CurTime.text = @"Currently";
+        self.CurPeriod.text = @"Nothing";
     }
     
 }
@@ -155,7 +183,10 @@ static BOOL Assembly;
     return time;
 }
 
-- (NSString *) convertToMilitary: (NSString *) time {
+- (NSString *) convertToMilitary: (NSString *) time and: (BOOL) convert{
+    NSString *t = [[NSString alloc] init];
+    
+    
     int index = 0;
     for(int i = 0; i<time.length; i++){
         if([time characterAtIndex:i]==':'){
@@ -163,26 +194,30 @@ static BOOL Assembly;
         }
     }
     NSString *hour = [time substringToIndex:index];
-    NSLog(hour);
     int value = [hour intValue];
-    if(value == 12){
-        value = 0;
-    }else{
-        value += 12;
+    if(convert){
+        if(value<6){
+            value += 12;
+        }
     }
-    NSString *milTime = [NSString stringWithFormat:@"%d%@", value, [time substringFromIndex:index]];
+    if(value<10){
+        t = [NSString stringWithFormat:@"%d%d",0,value];
+    }else{
+        t = [NSString stringWithFormat:@"%d",value];
+    }
+    NSString *milTime = [NSString stringWithFormat:@"%@%@", t, [time substringFromIndex:index]];
     return milTime;
 }
 
 - (void) loadTimes{
     
     NSString *label =[[NSString alloc] init];
-
+    
     label = @"6:30 - 7:09";
     [self.RegularTimes addObject: label];
     label= @"7:10 - 8:01";
     [self.RegularTimes addObject: label];
-    label = @"8:08 - 9:00";
+    label = @"8:08 - 8:59";
     [self.RegularTimes addObject: label];
     label = @"9:06 - 10:01";
     [self.RegularTimes addObject: label];

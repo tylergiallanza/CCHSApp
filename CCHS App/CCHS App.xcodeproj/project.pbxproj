@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F15940C1B0BA0B100342C6A /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F15940B1B0BA0B100342C6A /* Assembly.m */; };
 		3F1B0AA31AF7AC1000A511D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0AA21AF7AC1000A511D5 /* main.m */; };
 		3F1B0AA61AF7AC1000A511D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0AA51AF7AC1000A511D5 /* AppDelegate.m */; };
 		3F1B0AA91AF7AC1000A511D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0AA81AF7AC1000A511D5 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F15940A1B0BA0B100342C6A /* Assembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
+		3F15940B1B0BA0B100342C6A /* Assembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
 		3F1B0A9D1AF7AC1000A511D5 /* CCHS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCHS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1B0AA11AF7AC1000A511D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1B0AA21AF7AC1000A511D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */,
 				3F1B0AA81AF7AC1000A511D5 /* ViewController.m */,
 				3F1B0AAA1AF7AC1000A511D5 /* Main.storyboard */,
+				3F15940A1B0BA0B100342C6A /* Assembly.h */,
+				3F15940B1B0BA0B100342C6A /* Assembly.m */,
 				9A09E4AC1AFEF59D00F5B86D /* Schedule.h */,
 				9A09E4AD1AFEF59D00F5B86D /* Schedule.m */,
 				3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */,
@@ -268,6 +273,7 @@
 				3FE5C5A81AFA503600758162 /* ClubViewController.m in Sources */,
 				3FE5C5A51AFA501B00758162 /* FacultyViewController.m in Sources */,
 				3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */,
+				3F15940C1B0BA0B100342C6A /* Assembly.m in Sources */,
 				3FE5C5A21AFA4FF100758162 /* BellViewController.m in Sources */,
 				9AF364F31B07F1C80083806A /* BellBackground.m in Sources */,
 			);
