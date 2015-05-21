@@ -37,7 +37,6 @@ static BOOL Assembly;
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    NSLog(@"bell controller");
     self.RegularTimes = [[NSMutableArray alloc] init];
     self.StormTimes = [[NSMutableArray alloc] init];
     self.AssemblyTimes = [[NSMutableArray alloc] init];
@@ -56,11 +55,9 @@ static BOOL Assembly;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
     NSString *curTime = [dateFormatter stringFromDate:self.date];
-    NSLog(curTime);
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
     dateFormatter.timeStyle = NSDateFormatterNoStyle;
     NSString *curDay = [dateFormatter stringFromDate:self.date];
-    NSLog(curDay);
     curTime = [self convertToMilitary:curTime and:NO];
     for(int i = 0; i<self.CollabDates.count; i++){
         NSString *day = [self.CollabDates objectAtIndex:i];
@@ -106,7 +103,6 @@ static BOOL Assembly;
     time = [self convertToMilitary:time and:NO];
     NSString *symbol = [time substringFromIndex:time.length-2];
     time = [time substringToIndex:time.length-3];
-    NSLog(time);
     if([symbol isEqualToString:@"PM"]){
         if(![[time substringToIndex:2] isEqualToString:@"12"]){
             int index = 0;
@@ -120,7 +116,6 @@ static BOOL Assembly;
             hour += 12;
             time = [NSString stringWithFormat:@"%d%@", hour, [time substringFromIndex:index]];
             //time = [self convertToMilitary:time and: YES];
-            NSLog(@"HI");
         }
     }else{
         if([[time substringToIndex:2] isEqualToString:@"12"]){

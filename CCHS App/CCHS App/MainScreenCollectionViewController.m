@@ -93,14 +93,11 @@ static NSString * const reuseIdentifier = @"Cell";
     for(int i=0;i<_buttons.count;i++) {//go through the buttons...
         if([[_buttons objectAtIndex:i] isEqual:selector]){//when you find the one that is clicked one(thus the selector of this method)
             @try {//in a try catch to satify the compiler and make it so the image with out a sceen (the ones we didnt choose to implement) dont cause problems when they are clicked
-                NSLog(@"Will segue here with %@", [_images objectAtIndex: i]);//test
                 [self performSegueWithIdentifier: [_images objectAtIndex: i] sender:self];//perform the segue to the view controller the icon represents(the segue has the same
                                                                                         //name as the image)
 
             }
             @catch (NSException *exception) {
-                NSLog(@"main: Caught %@: %@", [exception name], [exception  reason]);
-                 //NSLog(@"%@ had an error",[_images objectAtIndex:i]);
                 //I don't need anything here. This block is so the program will execute segues it has and not do anything if it doesn't have the segue. This was the easiest way to code it. 
             }
             @finally {
@@ -116,7 +113,6 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDelegate>
 
 /*-(void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
- NSLog(@"%d", indexPath.row);
  }*/
 
 /*

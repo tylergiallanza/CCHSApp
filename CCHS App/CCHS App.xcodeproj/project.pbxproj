@@ -11,13 +11,13 @@
 		3F1B0AA31AF7AC1000A511D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0AA21AF7AC1000A511D5 /* main.m */; };
 		3F1B0AA61AF7AC1000A511D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0AA51AF7AC1000A511D5 /* AppDelegate.m */; };
 		3F1B0AA91AF7AC1000A511D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0AA81AF7AC1000A511D5 /* ViewController.m */; };
-		3F1B0AAC1AF7AC1000A511D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AAA1AF7AC1000A511D5 /* Main.storyboard */; };
 		3F1B0AAE1AF7AC1000A511D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */; };
 		3F1B0AB11AF7AC1000A511D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B0AAF1AF7AC1000A511D5 /* LaunchScreen.xib */; };
 		3F1B0ABD1AF7AC1000A511D5 /* CCHS_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B0ABC1AF7AC1000A511D5 /* CCHS_AppTests.m */; };
 		3FE5C59F1AFA4FD900758162 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */; };
 		3FE5C5A21AFA4FF100758162 /* BellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A11AFA4FF100758162 /* BellViewController.m */; };
 		3FE5C5A81AFA503600758162 /* ClubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A71AFA503600758162 /* ClubViewController.m */; };
+		3FE6E5FC1B0E2D6D0037BF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE6E5FB1B0E2D6D0037BF43 /* Main.storyboard */; };
 		3FEA00021AF8F91D00AC4CBF /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */; };
 		3FFD6CAC1B0238440091A6C7 /* club.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD6CAB1B0238440091A6C7 /* club.m */; };
 		9A09E4AE1AFEF59D00F5B86D /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09E4AD1AFEF59D00F5B86D /* Schedule.m */; };
@@ -46,7 +46,6 @@
 		3F1B0AA51AF7AC1000A511D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3F1B0AA71AF7AC1000A511D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3F1B0AA81AF7AC1000A511D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3F1B0AAB1AF7AC1000A511D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F1B0AB01AF7AC1000A511D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3F1B0AB61AF7AC1000A511D5 /* CCHS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CCHS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +57,7 @@
 		3FE5C5A11AFA4FF100758162 /* BellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BellViewController.m; sourceTree = "<group>"; };
 		3FE5C5A61AFA503600758162 /* ClubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubViewController.h; sourceTree = "<group>"; };
 		3FE5C5A71AFA503600758162 /* ClubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubViewController.m; sourceTree = "<group>"; };
+		3FE6E5FB1B0E2D6D0037BF43 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewController.h; sourceTree = "<group>"; };
 		3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewController.m; sourceTree = "<group>"; };
 		3FFD6CAA1B0238440091A6C7 /* club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = club.h; sourceTree = "<group>"; };
@@ -112,33 +112,33 @@
 			isa = PBXGroup;
 			children = (
 				3F1B0AA41AF7AC1000A511D5 /* AppDelegate.h */,
-				3F15940A1B0BA0B100342C6A /* Assembly.h */,
-				9AF364F11B07F1C80083806A /* BellBackground.h */,
-				3FE5C5A01AFA4FF100758162 /* BellViewController.h */,
-				3FE5C59D1AFA4FD900758162 /* CalendarViewController.h */,
-				3FFD6CAA1B0238440091A6C7 /* club.h */,
-				3FE5C5A61AFA503600758162 /* ClubViewController.h */,
-				B8D958EF1B0D8B400062D4C0 /* FacultyViewController.h */,
-				3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */,
-				9A09E4AC1AFEF59D00F5B86D /* Schedule.h */,
-				3F1B0AA71AF7AC1000A511D5 /* ViewController.h */,
 				3F1B0AA51AF7AC1000A511D5 /* AppDelegate.m */,
+				3F15940A1B0BA0B100342C6A /* Assembly.h */,
 				3F15940B1B0BA0B100342C6A /* Assembly.m */,
+				9AF364F11B07F1C80083806A /* BellBackground.h */,
 				9AF364F21B07F1C80083806A /* BellBackground.m */,
+				3FE5C5A01AFA4FF100758162 /* BellViewController.h */,
 				3FE5C5A11AFA4FF100758162 /* BellViewController.m */,
+				3FE5C59D1AFA4FD900758162 /* CalendarViewController.h */,
 				3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */,
+				3FFD6CAA1B0238440091A6C7 /* club.h */,
 				3FFD6CAB1B0238440091A6C7 /* club.m */,
-				B8D958F21B0D8B5B0062D4C0 /* TeacherScreenViewController.h */,
-				B8D958F31B0D8B5B0062D4C0 /* TeacherScreenViewController.m */,
+				3FE5C5A61AFA503600758162 /* ClubViewController.h */,
 				3FE5C5A71AFA503600758162 /* ClubViewController.m */,
+				B8D958EF1B0D8B400062D4C0 /* FacultyViewController.h */,
 				B8D958F01B0D8B400062D4C0 /* FacultyViewController.m */,
-				3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */,
-				9A09E4AD1AFEF59D00F5B86D /* Schedule.m */,
-				3F1B0AA81AF7AC1000A511D5 /* ViewController.m */,
 				3F1B0AAD1AF7AC1000A511D5 /* Images.xcassets */,
 				3F1B0AAF1AF7AC1000A511D5 /* LaunchScreen.xib */,
-				3F1B0AAA1AF7AC1000A511D5 /* Main.storyboard */,
+				3FE6E5FB1B0E2D6D0037BF43 /* Main.storyboard */,
+				3FEA00001AF8F91D00AC4CBF /* MainScreenCollectionViewController.h */,
+				3FEA00011AF8F91D00AC4CBF /* MainScreenCollectionViewController.m */,
+				9A09E4AC1AFEF59D00F5B86D /* Schedule.h */,
+				9A09E4AD1AFEF59D00F5B86D /* Schedule.m */,
 				3F1B0AA01AF7AC1000A511D5 /* Supporting Files */,
+				B8D958F21B0D8B5B0062D4C0 /* TeacherScreenViewController.h */,
+				B8D958F31B0D8B5B0062D4C0 /* TeacherScreenViewController.m */,
+				3F1B0AA71AF7AC1000A511D5 /* ViewController.h */,
+				3F1B0AA81AF7AC1000A511D5 /* ViewController.m */,
 			);
 			path = "CCHS App";
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F1B0AAC1AF7AC1000A511D5 /* Main.storyboard in Resources */,
+				3FE6E5FC1B0E2D6D0037BF43 /* Main.storyboard in Resources */,
 				3F1B0AB11AF7AC1000A511D5 /* LaunchScreen.xib in Resources */,
 				3F1B0AAE1AF7AC1000A511D5 /* Images.xcassets in Resources */,
 			);
@@ -304,14 +304,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3F1B0AAA1AF7AC1000A511D5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F1B0AAB1AF7AC1000A511D5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F1B0AAF1AF7AC1000A511D5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

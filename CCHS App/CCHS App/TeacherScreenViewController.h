@@ -1,8 +1,7 @@
 //
 //  TeacherScreenViewController.h
-//  teacherinfotesting
 //
-//  Created by Student on 5/18/15.
+//  Created by Avi Swartz on 5/18/15.
 //  Copyright (c) 2015 Avi Swartz. All rights reserved.
 //
 

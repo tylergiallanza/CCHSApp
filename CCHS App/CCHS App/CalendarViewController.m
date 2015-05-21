@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"calendar");
     // Do any additional setup after loading the view.
 }
 

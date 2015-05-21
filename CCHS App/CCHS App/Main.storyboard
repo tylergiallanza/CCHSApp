@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-=======
-<<<<<<< HEAD
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-=======
-<<<<<<< HEAD
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -49,7 +31,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK2-6o-f0n">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                            <state key="normal" backgroundImage="Left Arrow">
+                                            <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -66,7 +48,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GA6-rS-iJY">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                            <state key="normal" title="Button" image="calendar icon">
+                                            <state key="normal" title="Button">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -214,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLO-tB-Cep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709.5" y="-517.5"/>
+            <point key="canvasLocation" x="1530.75" y="-205.875"/>
         </scene>
         <!--Clubs-->
         <scene sceneID="fMz-UH-neI">
@@ -251,7 +233,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Clubs" id="gd7-LF-ATG">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; back" id="BGr-Yq-784">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="BGr-Yq-784">
                             <connections>
                                 <action selector="back:" destination="8ZN-pn-XgJ" id="gah-tX-D99"/>
                             </connections>
@@ -2119,7 +2101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnh-ul-lvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938.5" y="387.5"/>
+            <point key="canvasLocation" x="2172.75" y="387.375"/>
         </scene>
         <!--Teacher Screen View Controller-->
         <scene sceneID="H8o-IV-x0O">
@@ -2521,7 +2503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLa-Bv-x8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683.5" y="403.5"/>
+            <point key="canvasLocation" x="2864.25" y="387.375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yd3-BW-iy4">
@@ -2549,7 +2531,6 @@
         <image name="Delay" width="32" height="32"/>
         <image name="Left Arrow" width="40" height="40"/>
         <image name="Regular" width="32" height="32"/>
-        <image name="calendar icon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="krC-ey-YHH"/>
