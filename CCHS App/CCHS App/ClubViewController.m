@@ -2,7 +2,7 @@
 //  ClubViewController.m
 //  CCHS App
 //
-//  Created by Student on 5/6/15.
+//  Created by Katie on 5/6/15.
 //  Copyright (c) 2015 Students. All rights reserved.
 //
 
@@ -11,27 +11,113 @@
 
 @interface ClubViewController ()
 
-@property NSMutableArray* clubs;
+@property NSMutableArray* clubs;//array to keep track of all the clubs
 
 @end
 
 @implementation ClubViewController
 
+/**
+ *set up after the view is loaded
+ *
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"club");
-    
+    // Do any additional setup after loading the view.
+    //initializing the array for the clubs
     _clubs = [[NSMutableArray alloc] init];
-    //for(int i=0; i<10; i++){
-        // lis of clubs?
-    //}
+    //loading all the club info
+    [self loadInfo];
     
+    
+    
+}
+
+/**
+ *when the back button is clicked
+ *this causes it to go back to main screen
+ */
+-(IBAction)back:(id)sender{
+    [self dismissViewControllerAnimated:YES completion: nil];
+    
+
+}
+
+
+/**
+ *memory warning
+ *
+ */
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+/**
+ *making the number of sections
+ *which is 1
+ */
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+/**
+ *the number of cells in the table is the number of rows
+ *
+ */
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    // Return the number of rows in the section.
+    return _clubs.count;
+}
+/**
+ *displaying the club info upon one club being clicked
+ *
+ */
+- (IBAction)culbSpecifics:(id)sender {
+    //adding the sub veiw when the cell is clicked
+    //getting the club clicked on
+    CGPoint pointInView = [sender locationInView : self.tableView ];
+    NSIndexPath *path = [self.tableView indexPathForRowAtPoint : pointInView];
+    club *c = [_clubs objectAtIndex: path.row ];
+    
+    //putting the sponser information in a string format
+    NSString *s = [[NSString alloc] init];//the string for the sponser information
+    for(int i =0; i< [[c getSponsers] count]; i++ ){
+        if(i == 0){//the first sponser
+            s = [NSString stringWithFormat: @"%@", [[c getSponsers] objectAtIndex: i]];;
+        }else if((i + 1) == [[c getSponsers] count]){
+            if(i == 1){//the last sponser of two sponsers
+                s = [NSString stringWithFormat: @"%@ and %@", s, [[c getSponsers] objectAtIndex: i]];
+            }else{//the last sponser of multiple sponsers
+                s = [NSString stringWithFormat: @"%@, and %@", s, [[c getSponsers] objectAtIndex: i]];
+            }
+        }else{//the middle sponsers
+            s = [NSString stringWithFormat: @"%@, %@", s, [[c getSponsers] objectAtIndex: i]];
+        }
+    }
+    //putting the club information in a string format
+    NSString *str = [NSString stringWithFormat:@"%@ \n %@ \n %@ \n\n Sponser(s): %@",[c getTime], [c getDay], [c getPlace], s];
+    
+    //putting the text on the view -- using an alert
+    UIAlertView *clubSpec = [[UIAlertView alloc] initWithTitle:[c getName] message: str delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    
+    //showing the view with club information
+    [clubSpec show];
+
+}
+/**
+ *adding all the infomation of a club to the club then adding it to the list
+ *
+ */
+-(void) loadInfo{
     //reasons why I did this the hard way
-        //the file has the times all in different format and that bothered me so I would have to change that any way
-        //some of the clubs are not really clubs but classes so those needed to be taken out
-        //the days are also writen in different formats and would have to be changed
-        //there are cpitalization issues in the file
-        //the file is formated wierd making it hard to read
+    //the file has the times all in different format and that bothered me so I would have to change that any way
+    //some of the clubs are not really clubs but classes so those needed to be taken out
+    //the days are also writen in different formats and would have to be changed
+    //there are cpitalization issues in the file
+    //the file is formated wierd making it hard to read
+    
+    //loading all the club information
     NSMutableArray *s = [[NSMutableArray alloc] init];
     [s addObject:@"Lucas Nkwelle"];
     [_clubs addObject: [[club alloc] initWithDetails: @"4 Quarters 4 Kids" and: @"" and: @"Every other Tuesday" and: @"W92" and: s]];
@@ -70,14 +156,14 @@
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Kimberly Shuman Smith"];
     [s addObject:@"Mary Morgan"];
-
+    
     [_clubs addObject: [[club alloc] initWithDetails:@"Botanica @ Creek " and:@"3:15 to 4:15 pm" and: @"" and:@"Greenhouse (W545)" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Mike Barrett"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Capture the Flag" and:@"3:00 to 4:15 pm" and:@"Monday" and:@"Quad" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"TBD"];
-     [_clubs addObject: [[club alloc] initWithDetails:@"Chess Club" and: @"" and: @"" and: @"" and: s ]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Chess Club" and: @"" and: @"" and: @"" and: s ]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Jack Song"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Chinese Club" and: @"" and:@"" and:@"W301" and: s]];
@@ -103,8 +189,8 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"Cybersecurity Club" and:@"3:00 to 4:30pm" and:@"Wednesday" and:@"W431" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"J.Konrad"];
-     [s addObject:@"B.Adolphi"];
-     [s addObject:@"D.Sheeks"];
+    [s addObject:@"B.Adolphi"];
+    [s addObject:@"D.Sheeks"];
     [_clubs addObject: [[club alloc] initWithDetails:@"DECA" and:@"5th period" and:@"Wednesday" and:@"W218/W220" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Mary Ann Goff"];
@@ -112,9 +198,9 @@
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Leigh Vinzant"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Dia(BEAT)es Club" and:@"6:30 to 7:00 am" and:@"Wednesday" and:@"W102" and:s]];
-   s = [[NSMutableArray alloc] init];
+    s = [[NSMutableArray alloc] init];
     [s addObject:@"Marjorie Hamburger"];
-     [s addObject:@"Tess Simpson"];
+    [s addObject:@"Tess Simpson"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Diversity Task Force" and:@"5:00 to 6:30 pm" and:@"Thursday" and:@"Community Rooms" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Mary Chapman"];
@@ -128,7 +214,7 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"Excalibur" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Michael Goodman"];
-     [s addObject:@"Susan Shaw"];
+    [s addObject:@"Susan Shaw"];
     [_clubs addObject: [[club alloc] initWithDetails:@"FBLA" and: @"3:00 to 3:30 pm" and:@"Wednesday" and:@"W214" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Sasha Gartin "];
@@ -153,8 +239,8 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"French Honor Society" and:@"3:00 to 5:00 pm" and:@"Monday/Wednesday" and:@"W302" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Matt Buddington"];
-     [s addObject:@"Dan Draper"];
-     [s addObject:@"Chris Meagher"];
+    [s addObject:@"Dan Draper"];
+    [s addObject:@"Chris Meagher"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Frisbee Golf Club" and:@"3:00 to 4:45 pm" and:@"Tuesday" and:@"Village Greens Park" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Virginia DeCesare"];
@@ -182,36 +268,36 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"International Exchange Club" and: @"3:00 to 4:00 pm" and:@"Tuesday" and: @"W548" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Jim Young"];
-     [s addObject:@"Jessica Olsen "];
+    [s addObject:@"Jessica Olsen "];
     [_clubs addObject: [[club alloc] initWithDetails:@"Jewish Student Connection" and:@"3:00 to 4:00 pm" and:@"" and:@"E300" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Karl Mimmack"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Juggling/Unicycling Club" and:@"6:00 to 7:00 am" and:@"Friday" and:@"W435" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"DeeDee Hicks"];
-     [s addObject:@"Stephen Smith"];
+    [s addObject:@"Stephen Smith"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Key Club" and:@"3:00 to 6:00 pm" and:@"2nd and 4th Thursdays" and:@"West resource Center" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Yoon Park"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Korean Club" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject: @"Greg Critchett"];
-     [_clubs addObject: [[club alloc] initWithDetails: @"L.E.G.O.S." and: @"" and: @"" and: @"" and:s ]];
+    [_clubs addObject: [[club alloc] initWithDetails: @"L.E.G.O.S." and: @"" and: @"" and: @"" and:s ]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Amy Sommer"];
     [s addObject:@"Scott Holcomb"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Latin Club" and:@"" and:@"" and:@"IC716" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"TBD"];
-     [_clubs addObject: [[club alloc] initWithDetails:@"Linking Hearts" and: @"" and:@"" and:@"" and:s]];
+    [_clubs addObject: [[club alloc] initWithDetails:@"Linking Hearts" and: @"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Tim Libby"];
-     [s addObject:@"Sara Wynes "];
+    [s addObject:@"Sara Wynes "];
     [_clubs addObject: [[club alloc] initWithDetails:@"Marching Band/Color Guard" and:@"3:30 to 6:30 pm" and:@"Monday, Wednesday, and Thursday" and:@"FA640 " and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Dotty Dady"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Math Club" and:@"3:00 to 4:00 pm" and:@"Tuesday" and:@"W306" and:s]];
-
+    
     s = [[NSMutableArray alloc] init];
     [s addObject:@"David Valdez"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Model UN" and:@"3:00 to 4:00 pm" and:@"Thursday" and:@"IC738" and:s]];
@@ -223,12 +309,12 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"My Little Pony Club" and:@"3:00 to 4:00 pm" and:@"Every other Thursday" and:@"W551" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"David Stallings"];
-     [s addObject:@"Efong Yee"];
+    [s addObject:@"Efong Yee"];
     [_clubs addObject: [[club alloc] initWithDetails:@"National Art Honor Society" and:@"3:00 to 4:00 pm" and:@"Every other Wednesday" and:@"FA603" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Martha Benham"];
-     [s addObject:@"Erin Baxley"];
-     [s addObject:@"Karl Mimmack"];
+    [s addObject:@"Erin Baxley"];
+    [s addObject:@"Karl Mimmack"];
     [_clubs addObject: [[club alloc] initWithDetails:@"National Honor Society" and:@"" and:@"" and:@"" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Renee Dupont"];
@@ -243,7 +329,7 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"Peer Ambassadors" and:@"5th period" and:@"Tuesday" and:@"IC736" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Tim Libby"];
-     [s addObject:@"Allison Greenbaum"];
+    [s addObject:@"Allison Greenbaum"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Percussion Ensemble" and:@"3:30 to 6:30 pm" and:@"Monday and Wednesday" and:@"FA640" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Todd Adams"];
@@ -273,7 +359,7 @@
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Igor Tomcej"];
     [s addObject:@"Jill Carlson"];
-     [s addObject:@"Chris Danos"];
+    [s addObject:@"Chris Danos"];
     [s addObject:@"Kevin Harrell"];
     [_clubs addObject: [[club alloc] initWithDetails:@"Robotics Team Club" and:@"" and:@"Monday, Tuesday, Wednesday, Thursday, and Saturday" and:@"W557/W431" and:s]];
     s = [[NSMutableArray alloc] init];
@@ -360,85 +446,13 @@
     [_clubs addObject: [[club alloc] initWithDetails:@"Young Politicians" and:@"3:00 to 4:30pm" and:@"" and:@"E401" and:s]];
     s = [[NSMutableArray alloc] init];
     [s addObject:@"Michael Mazenko"];
-    [_clubs addObject: [[club alloc] initWithDetails:@"Youth Advisory Board" and:@"3:00 to 4:00 pm" and:@"Monday" and:@"IC715" and:s]];
-//
-
-    
-    
-
-//    
-//    
-
-    
-    
-    
-    
-    //UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithTitle:@"Back" style: UIBarStyleDefault target: self action: @selector(back)];
-    //self.navigationItem.leftBarButtonItem = b;
-                          
-    // Do any additional setup after loading the view.
+    [_clubs addObject: [[club alloc] initWithDetails:@"Youth AdvisoryBoard" and:@"3:00 to 4:00 pm" and:@"Monday" and:@"IC715" and:s]];
 }
 
-                          
--(IBAction)back:(id)sender{
-    [self dismissViewControllerAnimated:YES completion: nil];
-    
-
-}
-
-                    
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    // Return the number of rows in the section.
-    return _clubs.count;
-}
-- (IBAction)culbSpecifics:(id)sender {
-    
-    CGPoint pointInView = [sender locationInView : self.tableView ];
-    NSIndexPath *path = [self.tableView indexPathForRowAtPoint : pointInView];
-    club *c = [_clubs objectAtIndex: path.row ];
-    NSString *s = [[NSString alloc] init];
-    for(int i =0; i< [[c getSponsers] count]; i++ ){
-        if(i == 0){
-            s = [NSString stringWithFormat: @"%@", [[c getSponsers] objectAtIndex: i]];;
-        }else if((i + 1) == [[c getSponsers] count]){
-            if(i == 1){
-                s = [NSString stringWithFormat: @"%@ and %@", s, [[c getSponsers] objectAtIndex: i]];
-            }else{
-                s = [NSString stringWithFormat: @"%@, and %@", s, [[c getSponsers] objectAtIndex: i]];
-            }
-        }else{
-            s = [NSString stringWithFormat: @"%@, %@", s, [[c getSponsers] objectAtIndex: i]];
-        }
-    }
-    NSString *str = [NSString stringWithFormat:@"%@ \n %@ \n %@ \n\n Sponser(s): %@",[c getTime], [c getDay], [c getPlace], s];
-    
-  
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[c getName] message: str delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
-    
-//    UITextView *someTextView = [[UITextView alloc] initWithFrame:CGRectMake(15, 35, 250, 100)];
-//    someTextView.backgroundColor = [UIColor whiteColor];
-//    someTextView.textColor = [UIColor blackColor];
-//    someTextView.editable = NO;
-//    someTextView.font = [UIFont systemFontOfSize:15];
-//    someTextView.text = @"Enter Text Here";
-//    [alert addSubview:someTextView];
-    [alert show];
-    //[someTextView release];
-    //[alert release];
-}
-
-
+/**
+ *dequing thed cells
+ *
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
@@ -446,6 +460,11 @@
     cell.textLabel.text = [[_clubs objectAtIndexedSubscript:indexPath.row] getName];
     return cell;
 }
+
+/**
+ *each cell can not be edited
+ *
+ */
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     
