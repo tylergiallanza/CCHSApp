@@ -35,10 +35,15 @@
         ((UILabel *)[_periods objectAtIndex:i]).text=[NSString stringWithFormat:@"%d",i+1];
         ((UILabel *)[_classes objectAtIndex:i]).text=[_info objectAtIndex:5+2*i];
         ((UILabel *)[_rooms objectAtIndex:i]).text=[_info objectAtIndex:6+2*i];
-
-
+        ((UILabel *)[_periods objectAtIndex:i]).adjustsFontSizeToFitWidth=YES;
+        ((UILabel *)[_periods objectAtIndex:i]).adjustsFontSizeToFitWidth=YES;
+        ((UILabel *)[_periods objectAtIndex:i]).adjustsFontSizeToFitWidth=YES;
     }
     
+    _email.adjustsFontSizeToFitWidth=YES;
+    _office.adjustsFontSizeToFitWidth=YES;
+    _phone.adjustsFontSizeToFitWidth=YES;
+    _email.adjustsFontSizeToFitWidth=YES;
     
    // NSLog(@"%@", [_info objectAtIndex:0]);
     // Do any additional setup after loading the view.
