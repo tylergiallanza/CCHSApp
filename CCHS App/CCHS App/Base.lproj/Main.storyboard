@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1840,12 +1840,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:02 - 1:53" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP7-my-9qH">
-                                        <rect key="frame" x="151" y="373" width="117" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHY-TA-39J">
                                         <rect key="frame" x="178" y="14" width="63" height="21"/>
                                         <constraints>
@@ -1863,6 +1857,12 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3e-Lj-C59">
                                         <rect key="frame" x="44" y="402" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:02 - 1:53" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP7-my-9qH">
+                                        <rect key="frame" x="151" y="373" width="117" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1901,6 +1901,7 @@
                                     <constraint firstItem="mHY-TA-39J" firstAttribute="baseline" secondItem="Y9e-A6-hQa" secondAttribute="baseline" id="NJb-KU-p1p"/>
                                     <constraint firstItem="qdr-mp-Lso" firstAttribute="baseline" secondItem="ibg-43-raV" secondAttribute="baseline" id="Ou6-5J-k3v"/>
                                     <constraint firstItem="t69-f8-Wyt" firstAttribute="top" secondItem="oP7-my-9qH" secondAttribute="bottom" constant="8" id="R9M-hy-WwP">
+                                        <variation key="heightClass=regular" constant="15"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="Y9e-A6-hQa" firstAttribute="leading" secondItem="eDB-pe-VU6" secondAttribute="leading" constant="31" id="UM9-Nq-j8G">
@@ -1941,15 +1942,18 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="Hfg-bq-XCc" firstAttribute="top" secondItem="WmD-yG-wbi" secondAttribute="bottom" constant="13" id="rdr-GM-s6Z">
+                                        <variation key="heightClass=regular" constant="20"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="4hU-ja-hES" firstAttribute="top" secondItem="bRM-Ky-mPI" secondAttribute="bottom" constant="26" id="rk9-oM-nqy">
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="oP7-my-9qH" firstAttribute="top" secondItem="fzI-bV-sde" secondAttribute="bottom" constant="13" id="sDT-Xy-KJL">
+                                        <variation key="heightClass=regular" constant="20"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="i3e-Lj-C59" firstAttribute="top" secondItem="Hfg-bq-XCc" secondAttribute="bottom" constant="8" id="tEE-Zm-fcL">
+                                        <variation key="heightClass=regular" constant="15"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                                     </constraint>
                                     <constraint firstItem="mHY-TA-39J" firstAttribute="centerX" secondItem="fzI-bV-sde" secondAttribute="centerX" id="uBA-4S-Ple">
