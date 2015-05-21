@@ -32,7 +32,7 @@
 }
 
 - (IBAction)pressed:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
