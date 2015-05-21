@@ -11,8 +11,8 @@
 
 @interface MainScreenCollectionViewController ()
 
-@property NSArray *images;
-@property NSMutableArray *buttons;
+@property NSArray *images;//array of all of the images for the icons on the main sreen
+@property NSMutableArray *buttons;//an array list of all th buttons
 //@property CalendarViewController *calendar;
 @end
 
@@ -22,12 +22,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *backgroundImage = [UIImage imageNamed:@"CherryCreek.jpeg"];
-    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
-    backgroundImageView.image=backgroundImage;
+    UIImage *backgroundImage = [UIImage imageNamed:@"CherryCreek.jpeg"];//making a background
+    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];//making the background image scale to the size of the screen
+    backgroundImageView.image=backgroundImage;//adding a background
     [self.view insertSubview:backgroundImageView atIndex:0];
     //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"CherryCreek.jpeg"]]];
-    _images=[[NSArray alloc] initWithObjects:@"bell", @"calendar",@"contacts", @"club", @"powerschool", @"outlook", @"search",@"news",@"globe",@"phone",@"map", nil];
+    _images=[[NSArray alloc] initWithObjects:@"bell", @"calendar",@"contacts", @"club", @"powerschool", @"outlook", @"search",@"news",@"globe",@"phone",@"map", nil];//adding all the 
     _buttons= [[NSMutableArray alloc] init];
     //    _calendar=[[CalendarViewController alloc] init];
     
@@ -88,13 +88,14 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
-
+//when one of the buttons is clicked this method identifies it and calls coresponding the segue
 -(void)buttonClick:(id)selector {
-    for(int i=0;i<_buttons.count;i++) {
-        if([[_buttons objectAtIndex:i] isEqual:selector]){
-            @try {
-                NSLog(@"Will segue here with %@", [_images objectAtIndex: i]);
-                [self performSegueWithIdentifier: [_images objectAtIndex: i] sender:self]; //[_images objectAtIndex:i] sender:self];
+    for(int i=0;i<_buttons.count;i++) {//go through the buttons...
+        if([[_buttons objectAtIndex:i] isEqual:selector]){//when you find the one that is clicked one(thus the selector of this method)
+            @try {//in a try catch to satify the compiler and make it so the image with out a sceen (the ones we didnt choose to implement) dont cause problems when they are clicked
+                NSLog(@"Will segue here with %@", [_images objectAtIndex: i]);//test
+                [self performSegueWithIdentifier: [_images objectAtIndex: i] sender:self];//perform the segue to the view controller the icon represents(the segue has the same
+                                                                                        //name as the image)
 
             }
             @catch (NSException *exception) {
