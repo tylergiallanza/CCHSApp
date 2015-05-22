@@ -14,6 +14,7 @@
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
+    //draw eleven lines for the assembly schedule view to separate the periods
     UIBezierPath *line = [[UIBezierPath alloc] init];
     [line moveToPoint:CGPointMake(self.bounds.size.width/2, 0)];
     [line addLineToPoint:CGPointMake(self.bounds.size.width/2, self.bounds.size.height)];

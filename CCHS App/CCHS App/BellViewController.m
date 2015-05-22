@@ -24,6 +24,7 @@ static BOOL Collab;
 @property NSDate *date;
 @property NSMutableArray *CollabDates;
 @property NSMutableArray *AssemblyDates;
+@property NSMutableArray *StormDates;
 @property NSMutableArray *Schedule;
 @property (weak, nonatomic) IBOutlet UILabel *AssemblyPer;
 @property (weak, nonatomic) IBOutlet UILabel *AssemblyTime;
@@ -47,21 +48,32 @@ static BOOL Collab;
     self.date = [[NSDate alloc] init];
     self.CollabDates = [[NSMutableArray alloc] init];
     self.AssemblyDates = [[NSMutableArray alloc] init];
+    self.StormDates = [[NSMutableArray alloc] init];
     self.AssemblyPer.hidden = YES;
     self.AssemblyTime.hidden = YES;
     Assembly = NO;
     Collab = NO;
-    [self addDates];
-    [self loadTimes];
     
+    //add the dates the schedules occur to the arrays of the schedules
+    [self addDates:@"10/10/14" to:self.CollabDates];
+    [self addDates:@"12/3/14" to:self.CollabDates];
+    [self addDates:@"1/28/15" to:self.CollabDates];
+    [self addDates:@"3/18/15" to:self.CollabDates];
+    [self addDates:@"4/15/15" to:self.CollabDates];
+    //[self addDates:@"5/22/15" to:self.AssemblyDates];
+    
+    [self loadTimes]; //load the times of each schedule
+    
+    //get the current date and current time
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
     NSString *curTime = [dateFormatter stringFromDate:self.date];
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
     dateFormatter.timeStyle = NSDateFormatterNoStyle;
     NSString *curDay = [dateFormatter stringFromDate:self.date];
-    curTime = [self convertToMilitary:curTime and:NO];
+    curTime = [self convertToMilitary:curTime and:NO]; //add a 0 to the current time if needed
     
+    //check what the current schedule is and set the times to the times of that schedule
     for(int i = 0; i<self.CollabDates.count; i++){
         NSString *day = [self.CollabDates objectAtIndex:i];
         if([curDay isEqualToString:day]){
@@ -76,34 +88,33 @@ static BOOL Collab;
         if([curDay isEqualToString:day]){
             self.CurSchedule.text = @"Assembly Schedule";
             self.Schedule = self.AssemblyTimes;
+            //display the hidden label for the assembly period
             self.AssemblyTime.hidden = NO;
             self.AssemblyPer.hidden = NO;
             Assembly = YES;
         }
     }
-//
-//    self.Schedule = self.StormTimes;
-//    self.CurSchedule.text = @"Storm Schedule";
+    for(int i = 0; i<self.StormDates.count; i++){
+        NSString *day = [self.StormDates objectAtIndex:i];
+        if([curDay isEqualToString:day]){
+            self.CurSchedule.text = @"Storm / Delayed Start Schedule";
+            self.Schedule = self.StormTimes;
+        }
+    }
     
+    //set the times in the labels to the times of the current schedule
     for(int i = 0; i<self.Times.count; i++){
         UILabel *label = [self.Times objectAtIndex:i];
         label.text = [self.Schedule objectAtIndex:i];
     }
     
-    [self processTimes:curTime and:self.Schedule];
+    [self processTimes:curTime and:self.Schedule]; //determine the period the current time is in
     
 }
 
-//add dates to the schedules
-- (void) addDates{
-    
-    [self.CollabDates addObject: @"10/10/14"];
-    [self.CollabDates addObject: @"12/3/14"];
-    [self.CollabDates addObject: @"1/28/15"];
-    [self.CollabDates addObject: @"3/18/15"];
-    [self.CollabDates addObject: @"4/15/15"];
-    
-    //[self.CollabDates addObject: @"5/21/15"];
+//add date to a schedule
+-(void) addDates: (NSString *) date to: (NSMutableArray *) schedule{
+    [schedule addObject:date];
 }
 
 //process which period it is currently
@@ -172,7 +183,7 @@ static BOOL Collab;
             }else{
                 self.CurPeriod.text = [NSString stringWithFormat:@"%s%d", "Period ", i+1];
             }
-        //if the current time is in a period and not a new one, break
+            //if the current time is in a period and not a new one, break
         }else{
             break;
         }
@@ -202,7 +213,7 @@ static BOOL Collab;
 
 //converts a time to military time
 - (NSString *) convertToMilitary: (NSString *) time and: (BOOL) convert{
-  
+    
     NSString *t = [[NSString alloc] init];
     
     //find the hour component of the time
@@ -330,6 +341,7 @@ static BOOL Collab;
     return Assembly;
 }
 
+//return if it is a collaboration day
 +(BOOL) Collab{
     return Collab;
 }

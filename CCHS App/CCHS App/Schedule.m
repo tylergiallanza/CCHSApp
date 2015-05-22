@@ -13,10 +13,8 @@
 
 
 - (void)drawRect:(CGRect)rect {
+    //draw ten lines on the schedule view to separate the periods
     int numLines = 10;
-//    if([BellViewController Assembly]){
-//        numLines = 11;
-//    }
     UIBezierPath *line = [[UIBezierPath alloc] init];
     [line moveToPoint:CGPointMake(self.bounds.size.width/2, 0)];
     [line addLineToPoint:CGPointMake(self.bounds.size.width/2, self.bounds.size.height)];
