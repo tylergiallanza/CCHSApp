@@ -17,7 +17,6 @@
 		3FE073D41B0F662600E1D824 /* CalendarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE073D11B0F662600E1D824 /* CalendarButton.m */; };
 		3FE073D51B0F662600E1D824 /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE073D31B0F662600E1D824 /* MainCollectionViewController.m */; };
 		3FE073D81B0F665B00E1D824 /* CalendarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE073D71B0F665B00E1D824 /* CalendarTableViewController.m */; };
-		3FE5C59F1AFA4FD900758162 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */; };
 		3FE5C5A21AFA4FF100758162 /* BellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A11AFA4FF100758162 /* BellViewController.m */; };
 		3FE5C5A81AFA503600758162 /* ClubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C5A71AFA503600758162 /* ClubViewController.m */; };
 		3FE6E5FC1B0E2D6D0037BF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE6E5FB1B0E2D6D0037BF43 /* Main.storyboard */; };
@@ -60,8 +59,6 @@
 		3FE073D31B0F662600E1D824 /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainCollectionViewController.m; path = ../MainCollectionViewController.m; sourceTree = "<group>"; };
 		3FE073D61B0F665B00E1D824 /* CalendarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarTableViewController.h; sourceTree = "<group>"; };
 		3FE073D71B0F665B00E1D824 /* CalendarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTableViewController.m; sourceTree = "<group>"; };
-		3FE5C59D1AFA4FD900758162 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		3FE5C5A01AFA4FF100758162 /* BellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BellViewController.h; sourceTree = "<group>"; };
 		3FE5C5A11AFA4FF100758162 /* BellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BellViewController.m; sourceTree = "<group>"; };
 		3FE5C5A61AFA503600758162 /* ClubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubViewController.h; sourceTree = "<group>"; };
@@ -132,8 +129,6 @@
 				9AF364F21B07F1C80083806A /* BellBackground.m */,
 				3FE5C5A01AFA4FF100758162 /* BellViewController.h */,
 				3FE5C5A11AFA4FF100758162 /* BellViewController.m */,
-				3FE5C59D1AFA4FD900758162 /* CalendarViewController.h */,
-				3FE5C59E1AFA4FD900758162 /* CalendarViewController.m */,
 				3FFD6CAA1B0238440091A6C7 /* club.h */,
 				3FFD6CAB1B0238440091A6C7 /* club.m */,
 				3FE5C5A61AFA503600758162 /* ClubViewController.h */,
@@ -288,7 +283,6 @@
 				3F1B0AA61AF7AC1000A511D5 /* AppDelegate.m in Sources */,
 				3F1B0AA31AF7AC1000A511D5 /* main.m in Sources */,
 				9A09E4AE1AFEF59D00F5B86D /* Schedule.m in Sources */,
-				3FE5C59F1AFA4FD900758162 /* CalendarViewController.m in Sources */,
 				3FE073D51B0F662600E1D824 /* MainCollectionViewController.m in Sources */,
 				B8D958F11B0D8B400062D4C0 /* FacultyViewController.m in Sources */,
 				3FFD6CAC1B0238440091A6C7 /* club.m in Sources */,

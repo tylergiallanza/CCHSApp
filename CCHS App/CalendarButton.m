@@ -37,6 +37,7 @@ UILabel *date;
 
 
 -(void)setDate:(NSString *)text {
+    //set the font size to 13 so it displays on all devices
     date.text = text;
     date.font = [UIFont fontWithName:@"Helvetica" size:13.0f];
 }
@@ -46,7 +47,7 @@ UILabel *date;
     date = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width/8*7-self.frame.size.width/5, self.frame.size.height/9, self.frame.size.width/8+self.frame.size.width/4, self.frame.size.height/8+self.frame.size.height/9)];
     [self addSubview:date];
     if(isBusy) {
-        NSLog(@"im tryinf to draw");
+        //NSLog(@"im tryinf to draw");
         /*CGContextRef c = UIGraphicsGetCurrentContext();
         [[UIColor lightGrayColor] setFill];
         UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(self.frame.size.width/2-self.frame.size.width/8, self.frame.size.height*3/4-self.frame.size.width/8, self.frame.size.width/4, self.frame.size.width/4)];

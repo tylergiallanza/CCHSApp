@@ -140,10 +140,12 @@ int clickedButton;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    //add header to center calendar
     return CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/4);
 }
 
 -(CGSize)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    //set the size of each cell relative to screen size so it looks good on all devices
     return CGSizeMake([UIScreen mainScreen].bounds.size.width/7, [UIScreen mainScreen].bounds.size.height/12);
     
 }
@@ -151,7 +153,7 @@ int clickedButton;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    //set color to color i array
+    //set color to color in array
     cell.layer.borderColor = [UIColor blueColor].CGColor;
     cell.layer.borderWidth = 0.5f;
     
@@ -162,6 +164,7 @@ int clickedButton;
     BOOL busy = false;
     //load fake data for testing purposes
     if(indexPath.row == 31 || indexPath.row == 14 || indexPath.row == 22) {
+        //fake data
         [temp addObject:[[NSString alloc] initWithString:@"12:30-3:30     Fundraiser"]];
         [temp addObject:[[NSString alloc] initWithString:@"3:30     Club Fair"]];
 
@@ -178,6 +181,7 @@ int clickedButton;
     
 
     
+    //color mask 0 = this month, 1 = other month, 2 = today
     if([[colorMask objectAtIndex:indexPath.row] intValue] == 0)
         b.backgroundColor = [UIColor whiteColor];
     else if([[colorMask objectAtIndex:indexPath.row] intValue] == 2)
@@ -211,7 +215,7 @@ int clickedButton;
 }
 +(NSMutableArray*)getData {
     //return data for viewing per day
-    NSLog(@"button %d is selected",clickedButton);
+    //NSLog(@"button %d is selected",clickedButton);
     return [data objectAtIndex:clickedButton];
 }
 /*
