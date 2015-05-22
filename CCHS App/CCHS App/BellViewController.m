@@ -9,6 +9,7 @@
 #import "BellViewController.h"
 
 static BOOL Assembly;
+static BOOL Collab;
 
 @interface BellViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *Per11;
@@ -49,6 +50,7 @@ static BOOL Assembly;
     self.AssemblyPer.hidden = YES;
     self.AssemblyTime.hidden = YES;
     Assembly = NO;
+    Collab = NO;
     [self addDates];
     [self loadTimes];
     
@@ -59,12 +61,14 @@ static BOOL Assembly;
     dateFormatter.timeStyle = NSDateFormatterNoStyle;
     NSString *curDay = [dateFormatter stringFromDate:self.date];
     curTime = [self convertToMilitary:curTime and:NO];
+    
     for(int i = 0; i<self.CollabDates.count; i++){
         NSString *day = [self.CollabDates objectAtIndex:i];
         if([curDay isEqualToString:day]){
             self.CurSchedule.text = @"Collaboration Day Schedule";
             self.Schedule = self.CollabTimes;
             self.Per11.text = @"Collaboration";
+            Collab = YES;
         }
     }
     for(int i = 0; i<self.AssemblyDates.count; i++){
@@ -77,7 +81,10 @@ static BOOL Assembly;
             Assembly = YES;
         }
     }
-    //  self.Schedule = self.AssemblyTimes;
+//
+//    self.Schedule = self.StormTimes;
+//    self.CurSchedule.text = @"Storm Schedule";
+    
     for(int i = 0; i<self.Times.count; i++){
         UILabel *label = [self.Times objectAtIndex:i];
         label.text = [self.Schedule objectAtIndex:i];
@@ -87,6 +94,7 @@ static BOOL Assembly;
     
 }
 
+//add dates to the schedules
 - (void) addDates{
     
     [self.CollabDates addObject: @"10/10/14"];
@@ -95,15 +103,16 @@ static BOOL Assembly;
     [self.CollabDates addObject: @"3/18/15"];
     [self.CollabDates addObject: @"4/15/15"];
     
-    [self.AssemblyDates addObject: @"5/19/15"];
+    //[self.CollabDates addObject: @"5/21/15"];
 }
 
+//process which period it is currently
 - (void) processTimes: (NSString *) time and: (NSMutableArray*) schedule{
-    
-    time = [self convertToMilitary:time and:NO];
+    time = [self convertToMilitary:time and:NO]; //add a 0 if needed to the hour of the current time
     NSString *symbol = [time substringFromIndex:time.length-2];
     time = [time substringToIndex:time.length-3];
     if([symbol isEqualToString:@"PM"]){
+        //if the time is in the afternoon and must be converted to military time, add 12 hours to it
         if(![[time substringToIndex:2] isEqualToString:@"12"]){
             int index = 0;
             for(int i = 0; i<time.length; i++){
@@ -115,14 +124,15 @@ static BOOL Assembly;
             int hour = [hr intValue];
             hour += 12;
             time = [NSString stringWithFormat:@"%d%@", hour, [time substringFromIndex:index]];
-            //time = [self convertToMilitary:time and: YES];
         }
     }else{
+        //if the hour is 12 am, convert it to 00 in military time
         if([[time substringToIndex:2] isEqualToString:@"12"]){
             time = [NSString stringWithFormat:@"%@%@", @"00", [time substringFromIndex:2]];
         }
     }
     
+    //get the time that the first period of the day starts
     NSString *first = [schedule objectAtIndex:0];
     int index = 0;
     for(int i = 0; i<first.length; i++){
@@ -133,31 +143,43 @@ static BOOL Assembly;
     }
     NSString *compTime = [first substringToIndex:index];
     compTime = [self convertToMilitary:compTime and:NO];
+    
+    //compare the current time of the day to the time the first period fo the day starts
     NSComparisonResult result = [time compare: compTime];
     if(result == NSOrderedDescending || result == NSOrderedSame){
         self.CurTime.text = [schedule objectAtIndex:0];
-        self.CurPeriod.text = @"Period 11";
+        if(Collab){
+            self.CurPeriod.text = @"Collaboration";
+        }else{
+            self.CurPeriod.text = @"Period 11";
+        }
+        //if the current time is greater than or equal to the time that the period starts, set the current period to the first period of the day
     }else{
         self.CurTime.text = @"Currently";
         self.CurPeriod.text = @"Nothing";
-        
+        //if the current time is before the first period starts, state there is currently nothing
     }
+    
+    //compare the current time to the ending times of the periods in the schedule
     for(int i = 0; i<schedule.count-1; i++){
         result = [time compare: [self convertToMilitary: [self getTime: [schedule objectAtIndex:i]] and: YES]];
+        
+        //if the current time comes after the time that the period at i ends, set the current period to the next period
         if(result == NSOrderedDescending){
             self.CurTime.text = [schedule objectAtIndex:i+1];
-            if(i==10){
+            if(Assembly==YES && i==10){
                 self.CurPeriod.text = @"Assembly";
             }else{
                 self.CurPeriod.text = [NSString stringWithFormat:@"%s%d", "Period ", i+1];
             }
+        //if the current time is in a period and not a new one, break
         }else{
             break;
         }
     }
-    NSString *mil = [self convertToMilitary: [self getTime: [schedule objectAtIndex:schedule.count-1]] and:YES];
     
-    result = [time compare: [self convertToMilitary: [self getTime: [schedule objectAtIndex:schedule.count-1]] and: YES]];
+    //if the current time is past the ending time of the last period of the day, print out that there is currently nothing
+    NSString *mil = [self convertToMilitary: [self getTime: [schedule objectAtIndex:schedule.count-1]] and:YES];
     result = [time compare: mil];
     if(result == NSOrderedDescending){
         self.CurTime.text = @"Currently";
@@ -166,6 +188,7 @@ static BOOL Assembly;
     
 }
 
+//gets the ending time of a certain period
 - (NSString *) getTime: (NSString *) time{
     int index = 0;
     for(int i = 0; i<time.length; i++){
@@ -177,10 +200,12 @@ static BOOL Assembly;
     return time;
 }
 
+//converts a time to military time
 - (NSString *) convertToMilitary: (NSString *) time and: (BOOL) convert{
+  
     NSString *t = [[NSString alloc] init];
     
-    
+    //find the hour component of the time
     int index = 0;
     for(int i = 0; i<time.length; i++){
         if([time characterAtIndex:i]==':'){
@@ -189,16 +214,23 @@ static BOOL Assembly;
     }
     NSString *hour = [time substringToIndex:index];
     int value = [hour intValue];
+    
+    //if the hour component is in the afternoon of the schedule times and should be converted to military time, convert it
     if(convert){
         if(value<6){
             value += 12;
         }
     }
+    
+    //convert the new hour to a string
     if(value<10){
         t = [NSString stringWithFormat:@"%d%d",0,value];
+        //add a 0 before the hour if the hour is one digit
     }else{
         t = [NSString stringWithFormat:@"%d",value];
     }
+    
+    //add the minutes to the hours in military time and return the military time
     NSString *milTime = [NSString stringWithFormat:@"%@%@", t, [time substringFromIndex:index]];
     return milTime;
 }
@@ -207,6 +239,7 @@ static BOOL Assembly;
     
     NSString *label =[[NSString alloc] init];
     
+    //load the times of a regular school day
     label = @"6:30 - 7:09";
     [self.RegularTimes addObject: label];
     label= @"7:10 - 8:01";
@@ -226,6 +259,7 @@ static BOOL Assembly;
     label = @"2:00 - 2:51";
     [self.RegularTimes addObject: label];
     
+    //load the times of a storm or delayed start day
     label = @"7:00 - 7:39";
     [self.StormTimes addObject: label];
     label = @"7:50 - 8:28";
@@ -245,6 +279,7 @@ static BOOL Assembly;
     label = @"2:04 - 2:51";
     [self.StormTimes addObject: label];
     
+    //load the times of assembly day
     label = @"6:30 - 7:09";
     [self.AssemblyTimes addObject: label];
     label = @"7:10 - 7:54";
@@ -266,6 +301,7 @@ static BOOL Assembly;
     label = @"2:01 - 2:51";
     [self.AssemblyTimes addObject: label];
     
+    //load the times of a collaboration day
     label = @"7:00 - 8:00";
     [self.CollabTimes addObject: label];
     label = @"8:10 - 8:54";
@@ -289,10 +325,14 @@ static BOOL Assembly;
     
 }
 
+//returns if it is an assembly day
 + (BOOL) Assembly{
     return Assembly;
 }
 
++(BOOL) Collab{
+    return Collab;
+}
 
 
 - (void)didReceiveMemoryWarning {
