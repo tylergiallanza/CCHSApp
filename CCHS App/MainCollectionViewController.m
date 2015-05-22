@@ -21,10 +21,14 @@ NSMutableArray *dates;
 NSMutableArray *colorMask;
 NSMutableArray *buttons;
 int clickedButton;
+- (IBAction)backClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //init all data types
     data = [[NSMutableArray alloc] init];
     dates = [[NSMutableArray alloc] initWithCapacity:42];
     colorMask = [[NSMutableArray alloc] initWithCapacity:42];
@@ -38,22 +42,19 @@ int clickedButton;
     
     int index = 0;
     
+    //get current date
     
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [[NSCalendar alloc]
                             initWithCalendarIdentifier:NSGregorianCalendar];
     NSCalendarUnit units = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekday;
     NSDateComponents *components = [calendar components:units fromDate:now];
-    
-    NSLog(@"Day: %ld", [components day]);
-    NSLog(@"Month: %ld", [components month]);
-    NSLog(@"Year: %ld", [components year]);
-    NSLog(@"Week: %ld", [components weekOfMonth]);
-    NSLog(@"Weekday: %ld", [components weekday]);
+
     index = [components weekOfMonth]*7+[components weekday];
     [dates replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:[components day]]];
     [colorMask replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:2]];
     
+    //count down from current day to start of cal
     int countDown = index;
     NSDateComponents *c = [[NSDateComponents alloc] init];
     [c setDay:-1];
@@ -67,6 +68,7 @@ int clickedButton;
         current = dayEarlier;
         NSDateComponents *new = [calendar components:units fromDate:dayEarlier];
 
+        //save day info in array
         if((int)[new month] != (int)[components month]) {
             [colorMask replaceObjectAtIndex:countDown withObject:[NSNumber numberWithInt:1]];
         }
@@ -76,6 +78,7 @@ int clickedButton;
     }
     
     
+    //count up from today to end of cal
     int countUp = index;
     c = [[NSDateComponents alloc] init];
     [c setDay:1];
@@ -90,15 +93,12 @@ int clickedButton;
     NSDateComponents *new = [calendar components:units fromDate:dayLater];
         
     if((int)[new month] != (int)[components month]) {
+        //if we go into the next month make it dark grey
             [colorMask replaceObjectAtIndex:countUp withObject:[NSNumber numberWithInt:1]];
     }
         
     [dates replaceObjectAtIndex:countUp withObject:[NSNumber numberWithInteger:[new day]]];
 
-    }
-    
-    for(int i=0;i<dates.count;i++) {
-        NSLog(@"%@",[dates objectAtIndex:i]);
     }
     
     
@@ -151,6 +151,7 @@ int clickedButton;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    //set color to color i array
     cell.layer.borderColor = [UIColor blueColor].CGColor;
     cell.layer.borderWidth = 0.5f;
     
@@ -159,6 +160,7 @@ int clickedButton;
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     BOOL busy = false;
+    //load fake data for testing purposes
     if(indexPath.row == 31 || indexPath.row == 14 || indexPath.row == 22) {
         [temp addObject:[[NSString alloc] initWithString:@"12:30-3:30     Fundraiser"]];
         [temp addObject:[[NSString alloc] initWithString:@"3:30     Club Fair"]];
@@ -184,6 +186,7 @@ int clickedButton;
     else
         b.backgroundColor = [UIColor colorWithRed:0.827f green:0.827f blue:0.827f alpha:1.0f];
     [b setup:busy];
+    //set date to val stored in array
     [b setDate:[[dates objectAtIndex:indexPath.row] stringValue]];
     [b addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [cell addSubview:b];
@@ -200,12 +203,14 @@ int clickedButton;
 #pragma mark <UICollectionViewDelegate>
 
 -(void)buttonClick:(id)sender {
+    //find what button was clicked and call the segue
     for(int i=0;i<buttons.count;i++)
         if([[buttons objectAtIndex:i] isEqual:sender])
             clickedButton = i;
     [self performSegueWithIdentifier:@"calSegue" sender:self];
 }
 +(NSMutableArray*)getData {
+    //return data for viewing per day
     NSLog(@"button %d is selected",clickedButton);
     return [data objectAtIndex:clickedButton];
 }

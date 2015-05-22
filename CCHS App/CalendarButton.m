@@ -17,9 +17,9 @@ UILabel *date;
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    NSLog(@"busy: %d",_busy);
     //CGContextRef c = UIGraphicsGetCurrentContext();
     if(_busy==1) {
+        //if there is stuff on the schedule draw a dot to indicate
     CGContextRef c = UIGraphicsGetCurrentContext();
     [[UIColor lightGrayColor] setFill];
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(self.frame.size.width/2-self.frame.size.width/8, self.frame.size.height*3/4-self.frame.size.width/8, self.frame.size.width/4, self.frame.size.width/4)];
@@ -42,6 +42,7 @@ UILabel *date;
 }
 
 -(void)setup:(BOOL)isBusy {
+    //init the text if it is busy
     date = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width/8*7-self.frame.size.width/5, self.frame.size.height/9, self.frame.size.width/8+self.frame.size.width/4, self.frame.size.height/8+self.frame.size.height/9)];
     [self addSubview:date];
     if(isBusy) {

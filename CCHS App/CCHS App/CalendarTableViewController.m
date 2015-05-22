@@ -50,6 +50,7 @@ NSMutableArray *datum;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
+    //get the data for the current date from the other view
     UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-100, 0, 200, 30)];
     [text setText:[datum objectAtIndex:indexPath.row]];
     [cell addSubview:text];
