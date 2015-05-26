@@ -34,7 +34,7 @@ static BOOL Collab;
 @implementation BellViewController
 
 -(void) viewWillAppear:(BOOL)animated{
-    //NSLog(@"viewWillAppear - bell");
+    NSLog(@"viewWillAppear - bell");
 }
 - (void)viewDidLoad {
     

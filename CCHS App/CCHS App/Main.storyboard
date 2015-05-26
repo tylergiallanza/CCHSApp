@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GpU-vM-vK3">
->>>>>>> origin/master
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -166,15 +162,41 @@
                     </collectionView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <segue destination="lQ5-V0-ZXX" kind="show" identifier="calendar" id="1dP-mq-chh"/>
                         <segue destination="eXd-3d-avV" kind="show" identifier="club" id="U9c-7S-n9t"/>
                         <segue destination="4NP-Zy-Ji9" kind="show" identifier="bell" id="FHE-52-Gdw"/>
                         <segue destination="81e-jn-7ch" kind="show" identifier="contacts" id="d0B-75-rYD"/>
-                        <segue destination="Wva-6N-TPb" kind="show" identifier="calendar" id="JVg-gU-7gZ"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBV-n7-EvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="656.5" y="360.5"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="mtx-bm-Wib">
+            <objects>
+                <viewController id="lQ5-V0-ZXX" customClass="CalendarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gd9-3K-M4G"/>
+                        <viewControllerLayoutGuide type="bottom" id="4kB-DC-nmy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4yp-Iz-Rei">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="vCe-JH-EaT">
+                                <rect key="frame" x="-164" y="199" width="375" height="44"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCe-JH-EaT" id="BlS-RY-G3t">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLO-tB-Cep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530.75" y="-205.875"/>
         </scene>
         <!--Clubs-->
         <scene sceneID="fMz-UH-neI">
@@ -2601,132 +2623,6 @@
             </objects>
             <point key="canvasLocation" x="1456" y="388"/>
         </scene>
-        <!--Calendar-->
-        <scene sceneID="iz9-Tj-A0t">
-            <objects>
-                <collectionViewController id="wGn-2i-vY1" customClass="MainCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aIB-YW-vJU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7gv-lA-vzR">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k7K-b9-0m2">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <size key="customSize" width="50" height="50"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="wGn-2i-vY1" id="DlQ-vr-IZ4"/>
-                            <outlet property="delegate" destination="wGn-2i-vY1" id="OiA-vo-TsG"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Calendar" id="kYV-qA-KBz">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="oh6-8d-Wii">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c1R-RC-sQ1">
-                                <rect key="frame" x="-23" y="-15" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backClicked:" destination="wGn-2i-vY1" eventType="touchUpInside" id="L2H-Nk-PYa"/>
-                                </connections>
-                            </button>
-                            <connections>
-                                <action selector="backClicked:" destination="wGn-2i-vY1" id="jpN-vs-NIW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <segue destination="Mx9-tu-gH1" kind="show" identifier="calSegue" id="EjZ-gf-JnM"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xtu-lp-B5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1689.5" y="-462.5"/>
-        </scene>
-        <!--Schedule-->
-        <scene sceneID="9AC-sD-HzF">
-            <objects>
-                <tableViewController id="E1R-bx-sVd" customClass="CalendarTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OKi-kb-7oD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="CnC-wE-4DN">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CnC-wE-4DN" id="3Az-pN-pOX">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="E1R-bx-sVd" id="8U3-e4-7KO"/>
-                            <outlet property="delegate" destination="E1R-bx-sVd" id="lgc-8t-4WK"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Schedule" id="3WW-Ci-3nR">
-                        <barButtonItem key="rightBarButtonItem" title="Return" id="jbW-r8-huJ">
-                            <connections>
-                                <segue destination="Wva-6N-TPb" kind="show" id="4XQ-OF-5mY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qrX-QF-46J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2148.5" y="-483.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rHl-oW-jGh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mx9-tu-gH1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vwu-4q-5Gp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="E1R-bx-sVd" kind="relationship" relationship="rootViewController" id="1Vf-S4-2tF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o0c-6u-VoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2544.5" y="-265.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lIs-mT-yfx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wva-6N-TPb" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ywn-la-nxD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wGn-2i-vY1" kind="relationship" relationship="rootViewController" id="yKc-9A-EK9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JRx-lY-dGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1102.5" y="-462.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Assembly" width="32" height="32"/>
@@ -2737,11 +2633,6 @@
         <image name="Regular" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="btl-aR-bpD"/>
-=======
-        <segue reference="JVg-gU-7gZ"/>
-        <segue reference="iQs-pG-LkH"/>
->>>>>>> origin/master
     </inferredMetricsTieBreakers>
 </document>
